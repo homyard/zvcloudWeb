@@ -1,0 +1,107 @@
+/**
+ *	众云视频管理后台 - 云存储（产品）
+ *	Author: zhangjungu
+ *	Date: 2016.12
+ */
+
+.mt10 {
+    margin-top: 10px;
+}
+
+.tab-head {
+    height: 42px;
+    margin-top: 20px;
+}
+
+.tab-head-item {
+    float: left;
+    width: 150px;
+    font-size: 16px;
+    color: #19bd9b;
+    line-height: 42px;
+    text-align: center;
+    border: 1px solid #19bd9b;
+    border-right: 0;
+    cursor: pointer;
+}
+
+.last-item {
+    border: 1px solid #19bd9b;
+}
+
+.tab-head-item.cur {
+    color: #fff;
+    background-color: #19bd9b;
+}
+
+.sub-tab-list {
+	float: right;
+	width: 203px;
+	height: 32px;
+}
+
+.sub-tab-bd {
+	margin-top: 42px;
+}
+
+.sub-tab-item {
+	float: left;
+	width: 100px;
+	height: 30px;
+	font: 14px/30px "Microsoft YaHei";
+	color: #01b3f1;
+	text-align: center;
+	cursor: pointer;
+	border: 1px solid #01b3f1;
+	border-left: 0;
+}
+
+.sub-tab-item.cur {
+	color: #fff;
+	background-color: #01b3f1;
+}
+
+.sub-last-item {
+	border: 1px solid #01b3f1;
+}
+
+.btn-green {
+    float: right;
+    margin-left: 20px;
+    font-size: 16px;
+    line-height: 30px;
+    width: 91px;
+    height: 30px;
+    color: #19bd9b;
+    border: 1px solid #19bd9b;
+    cursor: pointer;
+    text-align: center;
+}
+
+.date-item {
+    float: right;
+    margin-left: 20px;
+}
+
+.date-item label {
+    float: left;
+    font-size: 16px;
+    line-height: 30px;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.date-item input {
+    float: left;
+    padding-left: 10px;
+    width: 180px;
+    line-height: 30px;
+    height: 30px;
+}
+
+.echarts {
+    width: 1000px;
+    height: 600px;
+    margin: 0 auto;
+    margin-top: 20px;
+}

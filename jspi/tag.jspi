@@ -1,0 +1,4 @@
+<%@ taglib uri="http://java.sun.com/jstl/core_rt" prefix="c"%>
+<%@ taglib uri="/struts-tags" prefix="s"%>
+<%@ taglib prefix="machine" uri="/machine-tags" %>
+<c:set var="contextPath" value="${pageContext.request.contextPath}"/>

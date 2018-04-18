@@ -1,0 +1,152 @@
+/*
+ *  后台 - 应用详情 (license 列表)
+ *  author: zhangzj;
+ *
+ */
+
+.r-hd {
+    overflow: hidden;
+    height: 58px;
+}
+
+.acc-settings .l-item-con {
+    border-bottom: 0;
+}
+
+.r-hd h4 {
+    float: left;
+    font-size: 18px;
+    line-height: 58px;
+    color: #2a2a2a;
+}
+
+.change-info {
+    float: right;
+    display: block;
+    width: 89px;
+    height: 28px;
+    border: 1px solid #19bd9b;
+    font-size: 16px;
+    line-height: 28px;
+    text-align: center;
+    color: #19bd9b;
+    cursor: pointer;
+    margin-top: 14px;
+}
+
+.r-bd {
+    min-width: 900px;
+    overflow: hidden;
+    padding: 20px 30px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+}
+
+.info-item {
+    height: 50px;
+    font-size: 16px;
+}
+
+.info-item label {
+    float: left;
+    color: #898989;
+}
+
+.info-item p {
+    float: left;
+    margin-left: 20px;
+    color: #191919;
+}
+
+.tips {
+    font-size: 14px;
+    color: #f16161;
+}
+
+.table-title {
+    font-size: 18px;
+    color: #000;
+    margin-top: 30px;
+    overflow: hidden;
+    min-width: 100px;
+}
+
+.r-table {
+    margin-top: 20px;
+    min-width: 900px;
+    width: 100%;
+    border: 1px solid #ddd;
+    border-collapse: collapse;
+    background-color: #fff;
+}
+
+.r-table td,
+.r-table th {
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.r-table td {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.r-table th {
+    font-size: 16px;
+    color: #1a1a1a;
+}
+
+.t-head {
+    height: 44px;
+    background-color: #f3f3f3;
+}
+
+.r-table tr {
+    height: 50px;
+}
+
+.td1,
+.std1 {
+    width: 5%;
+}
+
+.std2,
+.std3 {
+    width: 10%;
+}
+
+.std4,
+.std5,
+.std6 {
+    width: 25%;
+}
+
+.td1,
+.td2,
+.td3,
+.td4 {
+    width: 10%;
+}
+
+.td5,
+.td6,
+.td7 {
+    width: 20%;
+}
+
+.tr2 {
+    background-color: #f6f6f6;
+}
+
+.back {
+    display: block;
+    width: 149px;
+    height: 43px;
+    color: #fff;
+    font-size: 18px;
+    text-align: center;
+    line-height: 43px;
+    background-color: #b3b3b3;
+    margin-top: 25px;
+}

@@ -1,0 +1,153 @@
+/**!
+ * cooperation页样式
+ * author: 张智俊;
+ */
+
+.main-c {
+    padding-top: 30px;
+    background-color: #fff;
+    min-width: 998px;
+}
+
+.img-div {
+    height: 307px;
+    min-width: 1151px;
+    background: url(../images/frontstage/banner/banner-co.jpg) no-repeat;
+    background-size: cover;
+}
+
+.left-menu {
+    height: 900px;
+    float: left;
+    width: 212px;
+}
+
+.left-title {
+    text-align: center;
+    height: 48px;
+    line-height: 48px;
+    font-size: 20px;
+    color: #fff;
+    background-color: #01b3f1;
+    padding: 0 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.left-item {
+    text-align: center;
+    cursor: pointer;
+    height: 48px;
+    border-bottom: 1px solid #ddd;
+    font-size: 16px;
+    line-height: 48px;
+    color: #191919;
+    padding: 0 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.left-item.cur {
+    color: #f38400;
+}
+
+.right-con {
+    margin-left: 30px;
+    min-height: 900px;
+    float: left;
+    border-left: 1px solid #ddd;
+    width: 900px;
+    background-color: #fff;
+    position: relative;
+}
+.right-item{
+  width:900px;
+}
+
+.int {
+    clear: both;
+    font-size: 25px;
+    margin: 70px 0 30px 30px;
+}
+
+.int-content {
+    font-size: 14px;
+    line-height: 34px;
+    width: 650px;
+    margin-left: 30px;
+    margin-bottom: 60px;
+    float: left;
+}
+
+.int-img {
+    float: left;
+    margin-top: 10px;
+    margin-left: 30px;
+}
+
+.company {
+    color: #01b3f1;
+}
+
+.demand {
+    margin-left: 30px;
+    display: inline-block;
+    overflow: hidden;
+    width: 829px;
+    border-bottom: 1px solid #ddd;
+}
+
+.bd {
+    margin: 0 10px 0 30px;
+}
+
+.demand li {
+    background: url(../images/frontstage/some/bd.jpg) no-repeat;
+    background-position: 30px 40px;
+    font-size: 14px;
+    text-align: left;
+    vertical-align: middle;
+    height: 90px;
+    width: 275px;
+    float: left;
+    border-top: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+}
+
+.demand li p {
+    margin: 36px 0 0 50px;
+    width: 160px;
+}
+
+.demand li:nth-child(3n) {
+    border-right: 1px solid #ddd;
+}
+
+.value {
+    margin-left: 30px;
+    display: inline-block;
+    width: 829px;
+    margin-bottom: 50px;
+}
+
+.value li {
+    background: url(../images/frontstage/some/bd.jpg) no-repeat;
+    background-position: 30px 40px;
+    text-align: left;
+    height: 90px;
+    display: block;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-bottom: none;
+}
+
+.value li p {
+    width: 800px;
+    margin: 36px 0 0 50px;
+}
+
+.value li:last-child {
+    border-bottom: 1px solid #ddd;
+}

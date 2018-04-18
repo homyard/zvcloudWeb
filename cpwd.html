@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="renderer" content="webkit">
+    <!-- 用于响应式网站 -->
+    <!-- <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" /> -->
+    <script src="js/cssboot.js"></script>
+    <script>
+    SrcBoot.output([
+        'css/bcommon.css',
+        'css/cpwd.css'
+    ]);
+    </script>
+    <title>后台 - 修改密码</title>
+</head>
+
+<body>
+    <div class="change">
+        <input type="password" class="change-input" autocomplete="off" placeholder="请输入新密码" id="newpwd" data-id="0">
+        <input type="password" class="change-input" autocomplete="off" placeholder="请再次输入新密码" id="repwd" data-id="1">
+        <div class="input-box clearfix">
+            <input type="text" class="img-code-text" id="img-code-text" placeholder="图片验证码">
+            <img src="" alt="图片验证码" class="img-code" id="img-code">
+        </div>
+        <div class="yzm clearfix">
+            <input type="text" class="change-input" autocomplete="off" placeholder="请输入验证码" id="yzm">
+            <button class="confirm-btn btn" id="send">获取验证码</button>
+        </div>
+        <div class="btn-box clearfix">
+            <button class="confirm-btn btn" id="confirm">确认</button>
+            <button class="cancel-btn btn" id="cancel">取消</button>
+        </div>
+    </div>
+    
+    <!-- 页面脚本 -->
+    <script src="js/jsboot.js"></script>
+    <script>
+    SrcBoot.output([
+        'plugins/uuid.js',
+        'js/uuid.js',
+        'js/func.js',
+        'js/cpwd.js'
+    ]);
+    </script>
+</body>
+
+</html>

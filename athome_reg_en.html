@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="renderer" content="webkit">
+    <!-- 用于响应式网站 -->
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+    <meta name="description" content="Athome Camera">
+    <meta name="keywords" content="Athome Camera">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <script src="js/cssboot.js"></script>
+    <script>
+    SrcBoot.output([
+        'css/common.css',
+        'css/share_reg.css'
+    ]);
+    </script>
+    <title>Athome Camera</title>
+</head>
+
+<body>
+    <div class="r-header">
+        <img src="images/frontstage/some/athome-logo2_en.png" class="r-logo" />
+    </div>
+    <div class="main-con clearfix">
+        <h4 class="reg-head">Register AtHome Camera Account</h4>
+        <div class="input-item clearfix mb0">
+            <input type="text" placeholder="please input your email account" class="info-input" id="mail">
+        </div>
+        <p class="help">* This email is the only way to retrieve or change your password so please ensure you have entered a valid email</p>
+        <div class="input-item clearfix">
+            <input type="password" placeholder="please input your password" class="info-input" id="pwd">
+        </div>
+        <div class="input-item clearfix">
+            <input type="password" placeholder="please input your password again" class="info-input" id="repwd">
+        </div>
+        <div class="input-item clearfix">
+            <input type="text" placeholder="please input verification code" class="yzm" id="yzm">
+            <img src="" class="img-yzm" id="img-yzm">
+        </div>
+        <div class="btn-box clearfix">
+            <button class="confirm" id="c-confirm">Confirm</button>
+        </div>
+    </div>
+    <!-- 页面脚本 -->
+    <script src="js/jsboot.js"></script>
+    <script>
+    SrcBoot.output([
+        'plugins/selectpick/js/selectpick.js',
+        'plugins/uuid.js',
+        'js/func.js',
+        'js/common.js',
+        'js/uuid.js',
+        'js/athome_en.js'
+    ]);
+    </script>
+</body>
+
+</html>

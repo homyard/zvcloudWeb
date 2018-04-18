@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="renderer" content="webkit">
+    <meta name="renderer" content="ie-comp">
+    <meta name="renderer" content="ie-stand">
+    <!-- 用于响应式网站 -->
+    <!-- <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" /> -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <script src="js/cssboot.js"></script>
+    <script>
+    SrcBoot.output([
+        'css/common.css',
+        'plugins/selectpick/css/selectpick.css',
+        'css/reg.css'
+    ]);
+    </script>
+    <script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan id='cnzz_stat_icon_1260090164' class='hidden' %3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1260090164' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <title>后台 - 注册</title>
+</head>
+
+<body>
+    <!-- header -->
+    <div class="header">
+        <div class="glass"></div>
+        <div class="container head-main clearfix">
+            <!-- logo -->
+            <img src="images/frontstage/some/logo-index1.png" class="logo l" />
+            <!-- nav -->
+            <ul class="nav l clearfix">
+                <li class="nav-item">
+                    <a href="index.html">首页</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="solution">解决方案</a>
+                </li>
+                <li class="nav-item">
+                    <a href="cooperation.html">合作案例</a>
+                </li>
+                <li class="nav-item">
+                    <a href="price.html">价格</a>
+                </li>
+                <li class="nav-item">
+                    <a href="SDK.html">SDK开发</a>
+                </li>
+                <li class="nav-item">
+                    <a href="documents.html">文档</a>
+                </li>
+                <li class="nav-item">
+                    <a href="news-list.html">新闻动态</a>
+                </li>
+                <li class="nav-item">
+                    <a href="aboutus.html">关于我们</a>
+                </li>
+            </ul>
+            <!-- head button -->
+            <div class="h-btn-box l clearfix" id="user-con">
+                    <a href="javascript:;" class="h-btn lo-btn" id="lo-btn">登录</a>
+                    <a href="register.html" class="h-btn">注册</a>
+                </div>
+        </div>
+    </div>
+    <div class="img-div">
+        <div class="im container">
+            <h4>感谢您对众云产品的信任和支持</h4>
+            <p>我们将持续不断的提升产品的安全和服务的品质，致力于成为物联网领域的视频运营服务商。</p>
+        </div>
+    </div>
+    <!-- main -->
+    <div class="main-content">
+        <div class="container clearfix">
+            <div class="main-reg">
+                <h4>注册众云账号</h4>
+                <div class="input-box clearfix">
+                    <div class="input-item clearfix">
+                        <input type="text" placeholder="手机号（将作为众云登录账号）" class="info-input" id="phone">
+                    </div>
+                    <div class="error-info hidden">
+                        <p>请填写正确的手机号</p>
+                        <span class="arrow"></span>
+                    </div>
+                </div>
+                <div class="input-box clearfix">
+                    <div class="input-item clearfix">
+                        <input type="text" placeholder="邮箱" class="info-input" id="mail">
+                    </div>
+                    <div class="error-info hidden">
+                        <p>请填写正确的邮箱</p>
+                        <span class="arrow"></span>
+                    </div>
+                </div>
+                <div class="input-box clearfix">
+                    <div class="input-item clearfix">
+                        <div id="pwdbox">
+                            <input type="password" placeholder="密码" class="pwd-input" autocomplete="new-password" id="pwd">
+                        </div>
+                        <a href="javascript:;" class="eyes" id="eyes"></a>
+                    </div>
+                    <div class="pwd-error error-info hidden">
+                        <p>请填写密码</p>
+                        <span class="arrow"></span>
+                    </div>
+                </div>
+                <div class="input-box clearfix">
+                    <div class="input-item clearfix">
+                        <input type="text" placeholder="公司/团队" class="info-input" id="username">
+                    </div>
+                    <div class="error-info hidden">
+                        <p>请填写公司/团队</p>
+                        <span class="arrow"></span>
+                    </div>
+                </div>
+                <div class="input-box clearfix">
+                    <input type="text" class="img-code-text" id="img-code-text" placeholder="图片验证码">
+                    <img src="" alt="图片验证码" class="img-code" id="img-code">
+                </div>
+                <a href="javascript:;" class="send" id="send">发送验证码</a>
+                <div class="input-box clearfix">
+                    <div class="input-item clearfix">
+                        <input type="text" placeholder="短信验证码" class="check info-input" id="verif">
+                    </div>
+                    <div class="error-info hidden">
+                        <p>请填写短信验证码</p>
+                        <span class="arrow"></span>
+                    </div>
+                </div>
+                <p class="qd">您是通过什么渠道找到我们的？</p>
+                <div class="input-box clearfix" id="select-box">
+                    <select id="select">
+                        <option>
+                            互联网搜索
+                        </option>
+                        <option>
+                            朋友推荐
+                        </option>
+                        <option>
+                            展会活动
+                        </option>
+                        <option>
+                            媒体报道
+                        </option>
+                        <option>
+                            掌上看家用户
+                        </option>
+                        <option>
+                            其他
+                        </option>
+                    </select>
+                </div>
+                <div class="agreement clearfix">
+                    <input type="checkbox" name="agreement" class="styled" id="checkb">
+                    <p class="agree-info">同意并遵守<a href="aboutus.html?m=tk">《众云服务条款》</a></p>
+                </div>
+                <a href="javascript:;" class="reg-btn">立即注册</a>
+                <p class="haveacc">已有帐号？<a href="javascript:;" id="lo">登录</a></p>
+            </div>
+        </div>
+    </div>
+    <div class="loading hidden">
+        <img src="images/backstage/loading.gif" id="loading">
+    </div>
+    <!-- footer -->
+    <div id="footer">
+        <script type="text/javascript">
+        $("#footer").load("footer.html");
+        </script>
+    </div>
+    <script type="x-tmpl-mustache" id="user-templ">
+        <a href='zvcloudManage.html' class='h-btn lo-btn'>{{mobile_phone}}</a>
+        <a href='#' class='h-btn' id='login-out'>注销</a>
+    </script>
+    <!-- 页面脚本 -->
+    <script src="js/jsboot.js"></script>
+    <script>
+    SrcBoot.output([
+        'plugins/checkboxstyle.js',
+        'plugins/uuid.js',
+        'plugins/selectpick/js/selectpick.js',
+        'js/uuid.js',
+        'js/func.js',
+        'js/common.js',
+        'js/register.js'
+    ]);
+    </script>
+</body>

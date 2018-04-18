@@ -1,0 +1,57 @@
+.app-list {
+	margin-top: 40px;
+	margin-left: 152px;
+}
+
+.app-item {
+	cursor: pointer;
+	float: left;
+	width: 108px;
+	margin-right: 22px;
+}
+
+.app-item img {
+	display: block;
+	width: 108px;
+	height: 108px;
+	border-radius: 54px;
+}
+
+.app-item img:hover {
+	width: 112px;
+	height: 112px;
+	// border: 4px solid #2d78f4;
+}
+
+.app-item span {
+	font-size: 18px;
+	font-weight: bold;
+	color: #000;
+	display: block;
+	text-align: center;
+	margin-top: 20px;
+}
+
+.app-un {
+	cursor: pointer;
+	float: left;
+	width: 108px;
+	margin-right: 22px;
+}
+
+
+.app-un img {
+	display: block;
+	width: 108px;
+	height: 108px;
+	border-radius: 54px;
+}
+
+.app-un span {
+	font-size: 18px;
+	font-weight: bold;
+	color: #000;
+	display: block;
+	text-align: center;
+	margin-top: 20px;
+}

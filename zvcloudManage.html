@@ -1,0 +1,64 @@
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="renderer" content="webkit">
+    <!-- 用于响应式网站 -->
+    <!-- <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" /> -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <script src="js/cssboot.js"></script>
+    <script>
+    SrcBoot.output([
+        'css/bcommon.css',
+        'css/manage.css',
+        'plugins/pager/pager.css'
+    ]);
+    </script>
+    <title>众云视频后台管理系统</title>
+</head>
+
+<body>
+    <div class="head clearfix">
+        <img src="images/backstage/logo.png" alt="">
+        <div class="user-info">
+            <div class="user-name" id="user-con">
+            </div>
+            <span class="home" id="home"></span>
+            <span class="line-out" id="login-out"></span>
+        </div>
+    </div>
+    <div class="left">
+        <div class="left-item" id="account" data-id="account.html">
+            <i></i>
+            <span>账户管理</span>
+        </div>
+        <div class="left-item cur" id="productList" data-id="productList.html">
+            <i></i>
+            <span>产品列表</span>
+        </div>
+        <div class="left-item" id="cloud" data-id="cloudAll.html">
+            <i></i>
+            <span>云存储</span>
+        </div>
+    </div>
+    <div class="right">
+        <iframe src="productList.html" class="r-frame" frameborder="no" border="0"></iframe>
+    </div>
+
+    <script type="x-tmpl-mustache" id="user-templ">
+        <a href="zvcloudManage.html">{{mobile_phone}}</a>
+    </script>
+    
+    <!-- 页面脚本 -->
+    <script src="js/jsboot.js"></script>
+    <script>
+    SrcBoot.output([
+        'plugins/pager/jquery.pager.js',
+        'js/func.js',
+        'js/manage.js'
+    ]);
+    </script>
+</body>
+
+</html>

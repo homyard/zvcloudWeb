@@ -1,0 +1,230 @@
+/**
+ *	众云视频管理后台 - 云存储（总）
+ *	Author: zhangjungu
+ *	Date: 2016.12
+ */
+
+html,
+body {
+    background-color: #f5f5f5;
+}
+
+.main-con {
+    padding: 0 40px;
+}
+
+.btn-bar {
+    height: 42px;
+    margin-top: 27px;
+    margin-bottom: 16px;
+    overflow: hidden;
+}
+
+.btn-bar p {
+	font-size: 18px;
+	line-height: 42px;
+}
+
+.totalNum {
+	color: #01b3f1;
+}
+
+.btn-blue {
+    float: right;
+    margin-top: 5px;
+    margin-left: 10px;
+    font-size: 16px;
+    line-height: 30px;
+    width: 91px;
+    height: 30px;
+    color: #01b3f1;
+    border: 1px solid #01b3f1;
+    cursor: pointer;
+    text-align: center;
+}
+
+.tab-head {
+    height: 42px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.tab-head-item {
+    float: left;
+    width: 150px;
+    font-size: 16px;
+    color: #01b3f1;
+    line-height: 42px;
+    text-align: center;
+    border: 1px solid #01b3f1;
+    border-right: 0;
+    cursor: pointer;
+}
+
+.last-item {
+    border: 1px solid #01b3f1;
+}
+
+.tab-head-item.cur {
+    color: #fff;
+    background-color: #01b3f1;
+}
+
+.sub-tab-list {
+    float: right;
+    width: 203px;
+    height: 32px;
+    margin-bottom: 10px;
+}
+
+.sub-tab-bd {
+    margin-top: 42px;
+}
+
+.sub-tab-item {
+    float: left;
+    width: 100px;
+    height: 30px;
+    font: 14px/30px "Microsoft YaHei";
+    color: #01b3f1;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid #01b3f1;
+    border-left: 0;
+}
+
+.sub-tab-item.cur {
+    color: #fff;
+    background-color: #01b3f1;
+}
+
+.sub-last-item {
+    border: 1px solid #01b3f1;
+}
+
+.btn-green {
+    float: right;
+    margin-left: 20px;
+    font-size: 16px;
+    line-height: 30px;
+    width: 91px;
+    height: 30px;
+    color: #01b3f1;
+    border: 1px solid #01b3f1;
+    cursor: pointer;
+    text-align: center;
+}
+
+.date-item {
+    float: right;
+    margin-left: 20px;
+}
+
+.date-item label {
+    float: left;
+    font-size: 16px;
+    line-height: 30px;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.date-item input {
+    float: left;
+    padding-left: 10px;
+    width: 180px;
+    line-height: 30px;
+    height: 30px;
+}
+
+.card-img {
+    display: block;
+    margin: 20px auto;
+    width: 250px;
+} 
+
+.do-btn {
+    padding: 5px 15px;
+    font: 14px/14px "Microsoft YaHei";
+    color: #01b3f1;
+    background-color: #fff;
+    border: 1px solid #01b3f1;
+    outline: none;
+    cursor: pointer;
+}
+
+.confirm {
+    margin-right: 10px;
+}
+
+.s_p {
+    font-size: 20px;
+    height: 40px;
+    padding-left: 5px;
+    outline: none;
+}
+
+.echarts {
+    width: 1000px;
+    height: 600px;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+.h59 {
+    height: 59px;
+    line-height: 59px;
+}
+
+.bb {
+    width: 190px;
+}
+
+.country-sub {
+    float: left;
+    width: 203px;
+    height: 32px;
+    margin-bottom: 10px;
+}
+
+.section {
+    float: right;
+    margin: 10px 0;
+}
+
+.country-sub-item,.section-item {
+    float: left;
+    width: 100px;
+    height: 30px;
+    font: 14px/30px "Microsoft YaHei";
+    color: #19bd9b;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid #19bd9b;
+    border-left: 0;
+}
+
+.section-item {
+    height: 40px;
+    line-height: 40px;
+}
+
+.country-sub-item.cur,.section-item.cur {
+    color: #fff;
+    background-color: #19bd9b;
+}
+
+.country-last-item,.section-last-item {
+    border: 1px solid #19bd9b;
+}
+
+.m0 {
+    margin-bottom: 0;
+}
+
+.mt0 {
+    margin-top: 0;
+}
+
+.mt30 {
+    margin-top: 30px;
+}

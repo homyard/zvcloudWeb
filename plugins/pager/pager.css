@@ -1,0 +1,35 @@
+.pager-control {
+    margin: 20px 0;
+    line-height: 30px;
+    font-size: 14px;
+    font-family: "Microsoft YaHei";
+    color: #666;
+    overflow: hidden;
+}
+
+.pager-control .pager-info {
+    float: left;
+}
+
+.pager-control .pager-nav {
+    float: right;
+}
+
+.pager-control .pager-nav span {
+    display: inline-block;
+    padding: 0 10px;
+    cursor: pointer;
+}
+
+.pager-control .pager-nav span.disable,
+.pager-control .pager-nav span.disable:hover {
+    cursor: not-allowed;
+    background: #fff;
+    color: #ccc;
+}
+
+.pager-control .pager-nav span:hover {
+    background: #157cbf;
+    color: #fff;
+}
+// 

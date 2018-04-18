@@ -1,0 +1,256 @@
+/**!
+ * 后台 - 注册页样式
+ * author: 张智俊;
+ */
+
+
+/* main begin */
+
+.img-div {
+    height: 307px;
+    min-width: 1151px;
+    background: url(../images/frontstage/banner/reg-bg.jpg) no-repeat;
+    background-size: cover;
+}
+
+.im h4 {
+    padding-top: 173px;
+}
+
+.main-content {
+    padding: 50px 0;
+}
+
+.main-reg {
+    width: 520px;
+    margin: 0 auto;
+}
+
+.main-reg h4 {
+    font-size: 26px;
+    color: #333;
+    margin-bottom: 37px;
+}
+
+.input-item {
+    width: 333px;
+    height: 53px;
+    padding-left: 15px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    line-height: 53px;
+    float: left;
+    margin-bottom: 25px;
+}
+
+.input-item input {
+    float: left;
+    border: 0;
+    outline: none;
+    width: 300px;
+    height: 53px;
+    line-height: 53px;
+}
+
+
+.input-item .check {
+    width: 220px;
+}
+
+.send {
+    display: block;
+    width: 350px;
+    height: 55px;
+    margin-bottom: 25px;
+    font: 16px/55px "Microsoft YaHei";
+    text-align: center;
+    color: #333;
+    background-color: #f1f1f1;
+}
+
+.img-code-text {
+    float: left;
+    width: 163px;
+    height: 53px;
+    padding-left: 15px;
+    margin: 0 20px 25px 0;
+    font: 16px/53px "Microsoft YaHei";
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+.img-code {
+    float: left;
+    width: 148px;
+    height: 53px;
+    border: 1px solid #ccc;
+}
+
+.eyes {
+    float: right;
+    margin-right: 13px;
+    width: 20px;
+    height: 20px;
+    margin-top: 18px;
+    background: url(../images/backstage/pwd-eye.png) no-repeat;
+}
+
+.error-info {
+    position: relative;
+    float: left;
+    margin-left: 15px;
+    margin-top: 2px;
+    height: 49px;
+    padding: 0 10px;
+    padding-left: 35px;
+    font-size: 12px;
+    line-height: 49px;
+    color: #ff0000;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: url(../images/backstage/error.png) 11px center no-repeat #f5f5f5;
+}
+
+.arrow {
+    position: absolute;
+    display: block;
+    width: 5px;
+    height: 10px;
+    left: -5px;
+    top: 18px;
+    background: url(../images/backstage/arrow.png) no-repeat;
+}
+
+.checkbox {
+    float: left;
+    width: 20px;
+    height: 20px;
+    // padding: 0 5px 0 0;
+    display: block;
+    background: url(../images/backstage/checkbox.png) no-repeat;
+    clear: left;
+}
+
+.agree-info {
+    float: left;
+    margin-left: 25px;
+    font-size: 14px;
+    color: #3f3f3f;
+}
+
+.agree-info a {
+    color: #01b3f1;
+}
+
+.reg-btn {
+    display: block;
+    width: 351px;
+    height: 54px;
+    background-color: #f16161;
+    margin-top: 27px;
+    font-size: 18px;
+    text-align: center;
+    color: #fff;
+    line-height: 54px;
+}
+
+.agreement {
+    margin-top: 25px;
+}
+
+.haveacc {
+    width: 351px;
+    text-align: center;
+    margin-top: 36px;
+    font-size: 16px;
+    color: #333;
+}
+
+.haveacc a {
+    color: #01b3f1;
+}
+
+
+/* main end */
+
+.left {
+    float: left;
+    width: 450px;
+    padding: 0 50px;
+    padding-top: 225px;
+    border-right: 1px solid #ddd;
+    height: 420px;
+}
+
+.right {
+    float: left;
+    width: 525px;
+    padding-top: 35px;
+    padding-left: 75px;
+}
+
+.left h3 {
+    font-size: 40px;
+    line-height: 1.5;
+    color: #191919;
+    text-align: center;
+}
+
+.left h4 {
+    font-size: 30px;
+    line-height: 1.5;
+    color: #191919;
+    text-align: center;
+}
+
+.blue {
+    color: #14c2ff;
+}
+
+.selectpick_div {
+    float: left;
+    font-size: 16px;
+    line-height: 55px;
+    border-radius: 0;
+    border: 1px solid #ccc;
+    padding-left: 0;
+}
+
+.selectpick_div_box {
+    margin: 0
+}
+
+.selectpick_icon {
+    height: 55px;
+}
+
+.qd {
+    font-size: 18px;
+    line-height: 50px;
+    border-bottom: 1px solid #ccc;
+    color: #333;
+    margin-bottom: 25px;
+}
+
+.loading {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    filter: alpha(opacity=60);
+    background-color: #fff;
+    z-index: 1002;
+    left: 0px;
+    opacity: 0.5;
+    -moz-opacity: 0.5;
+}
+
+
+.loading img {
+    position: absolute;
+    // margin-top: -18px;
+    top: 50%;
+    left: 50%;
+    margin-left: -18px;
+}

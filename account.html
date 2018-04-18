@@ -1,0 +1,90 @@
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="renderer" content="webkit">
+    <!-- 用于响应式网站 -->
+    <!-- <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" /> -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <script src="js/cssboot.js"></script>
+    <script>
+    SrcBoot.output([
+        'css/bcommon.css',
+        'css/account.css',
+        'plugins/pager/pager.css'
+    ]);
+    </script>
+    <title>众云视频后台管理系统 - 用户信息</title>
+</head>
+
+<body>
+    <div class="main-con">
+        <div class="btn-bar clearfix">
+            <span class="title">账户信息</span>
+            <span class="btn-green" id="change-pwd">修改密码</span>
+            <span class="btn-green" id="change-info">信息编辑</span>
+        </div>
+        <div class="account-con" id="account-con">
+        </div>
+    </div>
+
+    <script type="x-tmpl-mustache" id="account-templ">
+        <div class="acc-item clearfix">
+            <label>手机号：</label>
+            <p>{{mobile_phone}}</p>
+        </div>
+        <div class="acc-item clearfix">
+            <label>邮箱：</label>
+            <p>{{email}}</p>
+        </div>
+        <div class="acc-item clearfix">
+            <label>密码：</label>
+            <p>********</p>
+        </div>
+        <div class="acc-item clearfix">
+            <label>企业 ID：</label>
+            <p>{{company_id}}</p>
+        </div>
+        <div class="acc-item clearfix">
+            <label>企业 key：</label>
+            <p>{{company_key}}</p>
+        </div>
+        <hr style="border:1px dashed #000; height:1px">
+        <div class="acc-item edit-item clearfix">
+            <label>联系人姓名：</label>
+            <p>{{contact_person}}</p>
+            <input type="text" class="acc-input hidden" id="contact_person" autocomplete="off" placeholder="请输入联系人姓名" value="{{contact_person}}" />
+        </div>
+        <div class="acc-item edit-item clearfix">
+            <label>公司名称：</label>
+            <p>{{company_name}}</p>
+            <input type="text" class="acc-input hidden" id="company_name" autocomplete="off" placeholder="请输入公司名称" value="{{company_name}}" />
+        </div>
+        <div class="acc-item edit-item clearfix">
+            <label>公司地址：</label>
+            <p>{{company_address}}</p>
+            <input type="text" class="acc-input hidden" id="company_address" autocomplete="off" placeholder="请输入公司地址" value="{{company_address}}" />
+        </div>
+        <div class="acc-item edit-item clearfix">
+            <label>公司网址：</label>
+            <p>{{company_website}}</p>
+            <input type="text" class="acc-input hidden" id="company_website" autocomplete="off" placeholder="请输入公司网址" value="{{company_website}}" />
+        </div>
+        <div class="btn-box hidden clearfix">
+            <button class="confirm-btn btn" id="confirm">确认</button>
+            <button class="cancel-btn btn" id="cancel">取消</button>
+        </div>
+    </script>
+    <!-- 页面脚本 -->
+    <script src="js/jsboot.js"></script>
+    <script>
+    SrcBoot.output([
+        'plugins/pager/jquery.pager.js',
+        'js/func.js',
+        'js/account.js'
+    ]);
+    </script>
+</body>
+
+</html>

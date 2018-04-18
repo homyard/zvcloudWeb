@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="renderer" content="webkit">
+    <!-- 用于响应式网站 -->
+    <!-- <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" /> -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <script src="js/cssboot.js"></script>
+    <script>
+    SrcBoot.output([
+        'css/common.css',
+        'css/athome-reset.css'
+    ]);
+    </script>
+    <title>登陆注册 - 找回密码</title>
+</head>
+
+<body class="hidden">
+    <!-- header -->
+    <div class="header">
+        <div class="container clearfix">
+            <img src="images/frontstage/some/athome-logo.png" class="logo l hidden" id="company-logo" />
+        </div>
+    </div>
+    <div class="container clearfix">
+        <div class="main-con clearfix">
+            <div class="left-con">
+                <img src="images/backstage/resetPwd.jpg">
+            </div>
+            <div class="right-con">
+                <h4 class="t1">请重置您的密码</h4>
+                <div class="input-item clearfix">
+                    <input type="password" placeholder="请输入新密码" class="info-input" id="newpwd" data-id="0">
+                </div>
+                <div class="input-item clearfix">
+                    <input type="password" placeholder="请再次输入新密码" class="info-input" id="repwd" data-id="1">
+                </div>
+                <div class="btn-box clearfix mt49">
+                    <button class="confirm" id="c-confirm">确定</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="loading hidden">
+        <img src="images/backstage/loading.gif" id="loading">
+    </div>
+    <div class="footer">
+        <p>苏ICP备14054485号</p>
+    </div>
+
+    <!-- 页面脚本 -->
+    <script src="js/jsboot.js"></script>
+    <script>
+    SrcBoot.output([
+        'plugins/tabview.js',
+        'plugins/selectpick/js/selectpick.js',
+        'plugins/checkboxstyle.js',
+        'js/func.js',
+        'js/common.js',
+        'js/app-reset-ch.js'
+    ]);
+    </script>
+</body>
+
+</html>

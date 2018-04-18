@@ -1,0 +1,67 @@
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="renderer" content="webkit">
+    <!-- 用于响应式网站 -->
+    <!-- <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" /> -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <script src="js/cssboot.js"></script>
+    <script>
+    SrcBoot.output([
+        'css/bcommon.css',
+        'css/table.css',
+        'css/productList.css',
+        'plugins/pager/pager.css'
+    ]);
+    </script>
+    <title>众云视频后台管理系统 - 产品列表</title>
+</head>
+
+<body>
+    <div class="main-con">
+        <div class="btn-bar clearfix">
+            <span class="btn-blue" id="create">创建产品</span>
+        </div>
+        <table class="list-table">
+            <thead>
+                <tr class="t-head">
+                    <th class="td10">图标</th>
+                    <th class="td20">产品名称</th>
+                    <th class="td15">类型</th>
+                    <th class="td20">今日注册设备数</th>
+                    <!-- <th class="td5">实时在线用户数</th> -->
+                    <th class="td20">累计激活设备数</th>
+                    <th class="td15">管理</th>
+                </tr>
+            </thead>
+            <tbody id="productList-con">
+            </tbody>
+        </table>
+        <div id="pager"></div>
+    </div>
+    <script type="x-tmpl-mustache" id="productList-templ">
+        {{#items}}
+        <tr class="tr">
+            <td class="td10"><img src="{{logo_uri}}" alt="" class="pro-logo" /></td>
+            <td class="td20">{{productName}}</td>
+            <td class="td15">{{product_type}}</td>
+            <td class="td20">{{countdevice_registtoday}}</td>
+            <td class="td20">{{countdevice_activationall}}</td>
+            <td class="td15"><a href="javascript:;" class="op-btn" data-id="{{product_id}}">管理</a></td>
+        </tr>
+        {{/items}}
+    </script>
+    <!-- 页面脚本 -->
+    <script src="js/jsboot.js"></script>
+    <script>
+    SrcBoot.output([
+        'plugins/pager/jquery.pager.js',
+        'js/func.js',
+        'js/productList.js'
+    ]);
+    </script>
+</body>
+
+</html>

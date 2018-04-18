@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="renderer" content="webkit">
+    <!-- 用于响应式网站 -->
+    <!-- <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" /> -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <script src="js/cssboot.js"></script>
+    <script>
+    SrcBoot.output([
+        'css/common.css',
+        'css/re-pwd.css'
+    ]);
+    </script>
+    <title>登陆注册 - 找回密码</title>
+</head>
+
+<body>
+    <!-- header -->
+    <div class="header">
+        <div class="glass"></div>
+        <div class="container head-main clearfix">
+            <!-- logo -->
+            <img src="images/frontstage/some/logo-index1.png" class="logo l" />
+            <!-- nav -->
+            <ul class="nav l clearfix">
+                <li class="nav-item">
+                    <a href="index.html">首页</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="solution">解决方案</a>
+                </li>
+                <li class="nav-item">
+                    <a href="cooperation.html">合作案例</a>
+                </li>
+                <li class="nav-item">
+                    <a href="price.html">价格</a>
+                </li>
+                <li class="nav-item">
+                    <a href="SDK.html">SDK开发</a>
+                </li>
+                <li class="nav-item">
+                    <a href="documents.html">文档</a>
+                </li>
+                <li class="nav-item">
+                    <a href="news-list.html">新闻动态</a>
+                </li>
+                <li class="nav-item">
+                    <a href="aboutus.html">关于我们</a>
+                </li>
+            </ul>
+            <!-- head button -->
+            <div class="h-btn-box l clearfix" id="user-con">
+                <a href="javascript:;" class="h-btn lo-btn" id="lo-btn">登录</a>
+                <a href="register.html" class="h-btn">注册</a>
+            </div>
+        </div>
+    </div>
+    <div class="img-div">
+        <div class="im container">
+            <h4>感谢您对众云产品的信任和支持</h4>
+            <p>我们将持续不断的提升产品的安全和服务的品质，致力于成为物联网领域的视频运营服务商。</p>
+        </div>
+    </div>
+    <div class="container">
+        <div class="main-con clearfix">
+            <div class="left-con">
+                <img src="images/backstage/resetPwd.jpg">
+            </div>
+            <div class="right-con">
+                <h4 class="t1">请重置您的密码</h4>
+                <div class="input-item clearfix">
+                    <input type="password" placeholder="请输入新密码" class="info-input" autocomplete="off" id="newpwd" data-id="0">
+                </div>
+                <div class="input-item clearfix">
+                    <input type="password" placeholder="请再次输入新密码" class="info-input" autocomplete="off" id="repwd" data-id="1">
+                </div>
+                <div class="btn-box clearfix mt49">
+                    <button class="confirm" id="c-confirm">确定</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="footer">
+        <script type="text/javascript">
+        $("#footer").load("footer.html");
+        </script>
+    </div>
+    <script type="x-tmpl-mustache" id="user-templ">
+        <a href='zvcloudManage.html' class='h-btn lo-btn'>{{mobile_phone}}</a>
+        <a href='#' class='h-btn' id='login-out'>注销</a>
+    </script>
+    <!-- 页面脚本 -->
+    <script src="js/jsboot.js"></script>
+    <script>
+    SrcBoot.output([
+        'plugins/tabview.js',
+        'plugins/selectpick/js/selectpick.js',
+        'plugins/checkboxstyle.js',
+        'js/func.js',
+        'js/common.js',
+        'js/resetpwd.js'
+    ]);
+    </script>
+</body>
+
+</html>

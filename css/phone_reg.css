@@ -1,0 +1,141 @@
+.reg-img {
+	display: block;
+	width: 100%;
+}
+.main-con {
+	padding: 2em 1em;
+}
+
+.at-download {
+	display: block;
+	width: 90%;
+	margin: 1em auto;
+	font-size: 1.5em;
+	color: #fff;
+	padding: .5em 0;
+	background-color: #ff4838;
+	text-align: center;
+	outline: none;
+}
+
+.invite-p1 {
+	display: block;
+	text-align: center;
+	font-size: 1.2em;
+	color: #525252;
+	margin-top: 1em;
+	// margin-top: 2em;
+}
+
+.invite-p4 {
+	display: block;
+	text-align: center;
+	font-size: 2.5em;
+	color: #525252;
+	margin-top: 1em;
+}
+
+.invite-p2 {
+	display: block;
+	text-align: center;
+	font-size: 1.4em;
+	color: #ff4838;
+	margin-top: .3em;
+	margin-bottom: .5em;
+}
+
+.input-item {
+	width: 80%;
+	margin: 1em auto;
+}
+
+#phone_sel {
+    float: right;
+    height: 3em;
+    -webkit-appearance: none;
+    appearance: none;
+    box-shadow: 0 0 0 1px #ccc inset;
+    border: none;
+    font-size: 1em;
+    padding: 0 .5em;
+    width: 30%;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    background-color: #FFFFFF;
+    color: #333333;
+    outline: none;
+}
+
+.phone-input {
+	float: left;
+	width: 64%;
+    height: 3em;
+    border: none;
+    -webkit-appearance: none;
+    box-shadow: 0 0 0 1px #ccc inset;
+    outline: none;
+    padding-left: 3%;
+}
+
+.yzm {
+	float: left;
+	width: 64%;
+	height: 3em;
+    border: none;
+    -webkit-appearance: none;
+    box-shadow: 0 0 0 1px #ccc inset;
+    outline: none;
+    padding-left: 3%;
+}
+
+.img-yzm {
+	float: right;
+    width: 30%;
+    height: 3em;
+    -webkit-appearance: none;
+    box-shadow: 0 0 0 3px #ccc inset;
+}
+
+.confirm {
+	display: block;
+	width: 80%;
+	margin: 1em auto;
+	margin-bottom: 1em;
+	border: 0;
+	outline: none;
+	background-color: #ff4838;
+	font-size: 1.5em;
+	text-align: center;
+	color: #fff;
+	padding: .5em 0;
+}
+
+.invite-p3 {
+	display: block;
+	text-align: center;
+	font-size: 1em;
+	color: #989898;
+	margin-top: .5em;
+}
+
+.invite-p3 span {
+	color: #ff4838;
+}
+
+.success {
+	display: block;
+	width: 15%;
+	margin: 1em auto;
+}
+
+.red {
+	color: #ff4838;
+}
+
+.mt0 {
+	margin-top: .3em;
+}
+
+.mb2 {
+	margin-bottom: 2em;
+};

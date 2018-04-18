@@ -1,0 +1,88 @@
+/**!
+ * 后台 - 修改密码样式
+ * author: 张智俊;
+ */
+
+.change {
+    width: 319px;
+    margin: 0 auto;
+    padding-top: 40px;
+}
+
+
+.change-input {
+	width: 307px;
+	padding-left: 10px;
+	height: 36px;
+	border: 1px solid #aaaaaa;
+	margin-bottom: 20px;
+	outline: none;
+	line-height: 36px;
+	font-size: 16px;
+}
+
+.change-input:focus {
+	border: 1px solid #19bd9b;
+}
+
+.img-code-text {
+    float: left;
+    width: 163px;
+    height: 36px;
+    padding-left: 10px;
+    margin: 0 15px 20px 0;
+    font: 16px/36px "Microsoft YaHei";
+    border: 1px solid #aaa;
+    outline: none;
+}
+
+.img-code {
+    float: left;
+    width: 127px;
+    height: 36px;
+    border: 1px solid #aaa;
+}
+
+.btn-box {
+	width: 319px;
+	overflow: hidden;
+	height: 43px;
+}
+
+.btn {
+	width: 149px;
+	margin-right: 21px;
+	font-size: 18px;
+	color: #fff;
+	float: left;
+	border: 0;
+	outline: none;
+	height: 43px;
+	cursor: pointer;
+}
+
+.confirm-btn {
+	background-color: #01b3f1;
+}
+
+.cancel-btn {
+	background-color: #b3b3b3;
+	margin-right: 0;
+}
+
+.yzm {
+	width: 319px;
+	overflow: hidden;
+	height: 58px;
+}
+
+.yzm .change-input {
+	width: 137px;
+	margin-right: 21px;
+	float: left;
+}
+
+.yzm .btn {
+	margin-right: 0;
+	height: 38px;
+}

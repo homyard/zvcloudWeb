@@ -1,0 +1,56 @@
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="renderer" content="webkit">
+    <!-- 用于响应式网站 -->
+    <!-- <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" /> -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <script src="js/cssboot.js"></script>
+    <script>
+    SrcBoot.output([
+        'css/bcommon.css',
+        'plugins/select/easydropdown.css',
+        'css/table.css',
+        'js/fpick/flatpickr.min.css',
+        'css/productDetail.css',
+        'plugins/pager/pager.css',
+    ]);
+    </script>
+    <style type="text/css">
+    .layui-layer-title {
+        background-color: #19bd9b!important;
+        color: #fff!important;
+    }
+    </style>
+    <title>众云视频后台管理系统</title>
+</head>
+
+<body>
+    <div class="clearfix" style="padding: 40px;">
+        <div class="search-item clearfix l">
+            <label>起始时间</label>
+            <input type="text" id="startTime" readonly="readonly">
+        </div>
+        <div class="search-item clearfix l">
+            <label>结束时间</label>
+            <input type="text" id="endTime" readonly="readonly">
+        </div>
+        <span class="search-btn btn-green l" id="search_l">下载</span>
+    </div>
+    <p style="font-size: 16px;line-height: 2; padding-left: 40px;color: #ff0000">起始时间不得晚于结束时间</p>
+    <p style="font-size: 16px;line-height: 2; padding-left: 40px;color: #ff0000">起始时间和结束时间相差不得超过90天</p>
+    <!-- 页面脚本 -->
+    <script src="js/jsboot.js"></script>
+    <script>
+    SrcBoot.output([
+        'js/fpick/flatpickr.min.js',
+        'js/fpick/flatpickr.l10n.zh.js',
+        'js/func.js',
+        'js/dlicense.js'
+    ]);
+    </script>
+</body>
+
+</html>

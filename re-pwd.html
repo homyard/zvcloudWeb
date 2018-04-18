@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="renderer" content="webkit">
+    <!-- 用于响应式网站 -->
+    <!-- <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" /> -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <script src="js/cssboot.js"></script>
+    <script>
+    SrcBoot.output([
+        'css/common.css',
+        'css/re-pwd.css'
+    ]);
+    </script>
+    <title>登陆注册 - 找回密码</title>
+</head>
+
+<body>
+    <!-- header -->
+    <div class="header">
+        <div class="glass"></div>
+        <div class="container head-main clearfix">
+            <!-- logo -->
+            <img src="images/frontstage/some/logo-index1.png" class="logo l" />
+            <!-- nav -->
+            <ul class="nav l clearfix">
+                <li class="nav-item">
+                    <a href="index.html">首页</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="solution">解决方案</a>
+                </li>
+                <li class="nav-item">
+                    <a href="cooperation.html">合作案例</a>
+                </li>
+                <li class="nav-item">
+                    <a href="price.html">价格</a>
+                </li>
+                <li class="nav-item">
+                    <a href="SDK.html">SDK开发</a>
+                </li>
+                <li class="nav-item">
+                    <a href="documents.html">文档</a>
+                </li>
+                <li class="nav-item">
+                    <a href="news-list.html">新闻动态</a>
+                </li>
+                <li class="nav-item">
+                    <a href="aboutus.html">关于我们</a>
+                </li>
+            </ul>
+            <!-- head button -->
+            <div class="h-btn-box l clearfix" id="user-con">
+                <a href="javascript:;" class="h-btn lo-btn" id="lo-btn">登录</a>
+                <a href="register.html" class="h-btn">注册</a>
+            </div>
+        </div>
+    </div>
+    <div class="img-div">
+        <div class="im container">
+            <h4>感谢您对众云产品的信任和支持</h4>
+            <p>我们将持续不断的提升产品的安全和服务的品质，致力于成为物联网领域的视频运营服务商。</p>
+        </div>
+    </div>
+    <div class="container">
+        <div class="main-con clearfix">
+            <div class="left-con">
+                <img src="images/backstage/findPwd.jpg">
+            </div>
+            <div class="right-con">
+                <div class="tabview">
+                    <div class="tab-head clearfix" data-role="head">
+                        <a href="javascript:;" class="tab l cur" data-role="tab" data-target="phone">短信验证码找回</a>
+                        <a href="javascript:;" class="tab r" data-role="tab" data-target="mail">邮件找回</a>
+                    </div>
+                    <div class="tab-body" data-role="body">
+                        <div class="tab-con" data-role="tab-content" data-id="phone">
+                            <div class="input-item clearfix">
+                                <input type="text" placeholder="请输入注册手机号码" autocomplete="off" class="info-input" id="phone">
+                            </div>
+                            <div class="input-box clearfix">
+                                <input type="text" class="img-code-text" id="img-code-text" placeholder="图片验证码">
+                                <img src="" alt="图片验证码" class="img-code" id="img-code">
+                            </div>
+                            <a href="javascript:;" class="send" id="send">发送验证码</a>
+                            <div class="input-item clearfix">
+                                <input type="text" placeholder="短信验证码" autocomplete="off" class="check info-input" id="verif">
+                            </div>
+                            <div class="btn-box clearfix mt49">
+                                <button class="confirm" id="p-confirm">确定</button>
+                            </div>
+                        </div>
+                        <div class="tab-con" data-role="tab-content" data-id="mail">
+                            <div class="input-item clearfix">
+                                <input type="text" placeholder="请输入注册邮箱" class="info-input" autocomplete="off" id="mail">
+                            </div>
+                            <p class="tips">请输入与您账户绑定的邮箱地址，我们将会向该邮箱发送邮件指导您重置密码</p>
+                            <div class="btn-box clearfix mt68">
+                                <button class="confirm" id="m-confirm">确定</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="footer">
+        <script type="text/javascript">
+        $("#footer").load("footer.html");
+        </script>
+    </div>
+    <script type="x-tmpl-mustache" id="user-templ">
+        <a href='zvcloudManage.html' class='h-btn lo-btn'>{{mobile_phone}}</a>
+        <a href='#' class='h-btn' id='login-out'>注销</a>
+    </script>
+
+    <!-- 页面脚本 -->
+    <script src="js/jsboot.js"></script>
+    <script>
+    SrcBoot.output([
+        'plugins/tabview.js',
+        'plugins/selectpick/js/selectpick.js',
+        'plugins/uuid.js',
+        'plugins/checkboxstyle.js',
+        'js/uuid.js',
+        'js/func.js',
+        'js/common.js',
+        'js/re-pwd.js'
+    ]);
+    </script>
+</body>
+
+</html>

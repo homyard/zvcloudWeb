@@ -1,0 +1,46 @@
+/**
+ *	众云视频管理后台 - 产品列表
+ *	Author: zhangjungu
+ *	Date: 2016.12
+ */
+
+html,
+body {
+    background-color: #f5f5f5;
+}
+
+.main-con {
+    padding: 0 40px;
+}
+
+.btn-bar {
+    height: 42px;
+    margin-top: 27px;
+    margin-bottom: 16px;
+    overflow: hidden;
+}
+
+.btn-blue {
+    float: right;
+    font-size: 16px;
+    line-height: 40px;
+    width: 91px;
+    padding-left: 45px;
+    height: 40px;
+    color: #01b3f1;
+    border: 1px solid #01b3f1;
+    cursor: pointer;
+    background: url(../images/backstage/create.png) 24px center no-repeat;
+}
+
+.pro-logo {
+    display: block;
+    width: 70px;
+    height: 70px;
+    margin: 0 auto;
+}
+
+.op-btn {
+    font-size: 16px;
+    color: #01b3f1;
+}

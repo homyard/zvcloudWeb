@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="renderer" content="webkit">
+    <!-- 用于响应式网站 -->
+    <!-- <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" /> -->
+    <script src="js/cssboot.js"></script>
+    <script>
+    SrcBoot.output([
+        'css/bcommon.css',
+        'plugins/selectpick/css/selectpick.css',
+        'css/create-app.css'
+    ]);
+    </script>
+    <title>后台 - 创建账户</title>
+</head>
+
+<body>
+    <div class="create-main clearfix">
+        <div class="create-l">
+            <div class="input-item clearfix">
+                <input type="text" placeholder="产品名称" class="create-input" autocomplete="off" id="pro-name">
+                <p class="all-num"><span class="num" id="r-num">0</span>/30</p>
+            </div>
+            <div class="input-item sel-item clearfix" id="pro-box">
+                <select id="productList">
+                    <option value="-1">产品类型</option>
+                    <option value="0">监控</option>
+                    <option value="1">门铃</option>
+                    <option value="2">行车记录仪</option>
+                    <option value="3">机器人</option>
+                    <option value="4">无人机</option>
+                    <option value="5">行政执法</option>
+                    <option value="6">智能家居</option>
+                    <option value="7">其他</option>
+                </select>
+            </div>
+            <div class="input-item sel-item clearfix" id="auth-box">
+                <select id="authList">
+                    <option value="-1">授权方式</option>
+                    <option value="0">服务器授权</option>
+                    <option value="1">license授权</option>
+                    <option value="2">无限授权</option>
+                </select>
+            </div>
+            <div class="input-item sel-item clearfix" id="pri-box">
+                <select id="privacyList">
+                    <option value="-1">隐私级别</option>
+                    <option value="0">公开</option>
+                    <option value="1">半公开</option>
+                    <option value="2">隐私</option>
+                </select>
+            </div>
+            <div class="btn-box clearfix">
+                <button class="c-btn" id="confirm">确定</button>
+                <button class="x-btn" id="cancel">取消</button>
+            </div>
+        </div>
+        <div class="create-r">
+            <div class="logo">
+                <img src="" alt="" id="logo_view" />
+            </div>
+            <div>
+                <!-- <input type="button" value="上传应用图标" class="btn_uploader" onclick="path.click()">
+                <input type="file" id="path" style="display:none" onchange="upfile.value=this.value"> -->
+                <!-- <input type="file" class="btn_uploader"> -->
+                <label class="btn_uploader" id="logoUploader">上传应用图标</label>
+                <p class="tips">
+                    请上传1M大小以内的图片,safari暂不支持上传
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- 页面脚本 -->
+    <script src="js/jsboot.js"></script>
+    <script>
+    SrcBoot.output([
+        'plugins/selectpick/js/selectpick.js',
+        'plugins/webuploader/webuploader.min.js',
+        'js/func.js',
+        'js/app-edit.js'
+    ]);
+    </script>
+</body>
+
+</html>

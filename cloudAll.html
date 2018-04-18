@@ -1,0 +1,563 @@
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="renderer" content="webkit">
+    <!-- 用于响应式网站 -->
+    <!-- <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" /> -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <script src="js/cssboot.js"></script>
+    <script>
+    SrcBoot.output([
+        'css/bcommon.css',
+        'js/datepicker/css/bootstrap.min.css',
+        'js/datepicker/css/daterangepicker.css',
+        'js/fpick/flatpickr.min.css',
+        'plugins/pager/pager.css',
+        'css/table.css',
+        'css/cloud.css'
+    ]);
+    </script>
+    <title>众云视频后台管理系统 - 云存储</title>
+</head>
+
+<body>
+    <div class="main-con">
+        <div class="tabview">
+            <div class="tab-head clearfix" data-role="head">
+                <div class="tab-head-item cur" data-role="tab" data-target="allCount" id="allCount">
+                    总汇
+                </div>
+                <div class="tab-head-item" data-role="tab" data-target="detailC" id="detailC">
+                    业务流水
+                </div>
+                <div class="tab-head-item" data-role="tab" data-target="price" id="price">
+                    服务定价
+                </div>
+                <div class="tab-head-item" data-role="tab" data-target="detailCount" id="detailCount">
+                    详情分析
+                </div>
+                <div class="tab-head-item" data-role="tab" data-target="newCount" id="newCount">
+                    新增销售额分析
+                </div>
+                <div class="tab-head-item" data-role="tab" data-target="channelsCount" id="channelsCount">
+                    渠道分析
+                </div>
+                <div class="tab-head-item last-item" data-role="tab" data-target="packageCount" id="packageCount">
+                    套餐分析
+                </div>
+            </div>
+            <div class="tab-con" data-role="body">
+                <div class="tab-con-item" data-role="tab-content" data-id="allCount">
+                    <div class="btn-bar m0 clearfix">
+                        <p>国内总金额：<span id="totalNum" class="totalNum"></span></p>
+                    </div>
+                    <div class="btn-bar mt0 clearfix">
+                        <p>国外总金额：<span id="foreigntotalNum" class="totalNum"></span></p>
+                    </div>
+                    <table class="list-table">
+                        <thead>
+                            <tr class="t-head">
+                                <th class="td20">时间</th>
+                                <th class="td20">财务对象</th>
+                                <th class="td15">国内销售额（¥）</th>
+                                <th class="td15">国内销量</th>
+                                <th class="td15">国外销售额（$）</th>
+                                <th class="td15">国外销量</th>
+                            </tr>
+                        </thead>
+                        <tbody id="cloudAll-con">
+                        </tbody>
+                    </table>
+                    <div class="btn-bar clearfix">
+                        <span class="btn-blue hidden" id="detail">了解详情</span>
+                    </div>
+                </div>
+                <div class="tab-con-item hidden" data-role="tab-content" data-id="detailC">
+                    <div class="clearfix mt10">
+                        <div class="btn-bar clearfix">
+                            <span class="search-btn btn-green" id="d-clear">清空</span>
+                            <span class="search-btn btn-green" id="d-search">查询</span>
+                            <div class="date-item clearfix">
+                                <label>激活时间</label>
+                                <div class="input-group">
+                                    <button type="button" class="btn bb btn-default pull-right" id="daterange-btn">
+                                        <span><i class="fa fa-calendar"></i> 日期选择</span>
+                                        <i class="fa fa-caret-down"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="date-item clearfix">
+                                <label>采集端CID</label>
+                                <input type="text" class="date" id="avs_cid">
+                            </div>
+                            <div class="date-item clearfix">
+                                <label>订单ID</label>
+                                <input type="text" class="date" id="order_no">
+                            </div>
+                        </div>
+                        <div class="country-sub clearfix" id="flag">
+                            <div class="country-sub-item country-last-item" data-target="in" id="init">国内</div>
+                            <div class="country-sub-item" data-target="out">国外</div>
+                        </div>
+                        <div class="sub-tab-bd mt10">
+                            <div class="sub-tab-con">
+                                <table class="list-table">
+                                    <thead>
+                                        <tr class="t-head">
+                                            <th class="td20">订单ID</th>
+                                            <th class="td10">采集端CID</th>
+                                            <th class="td20">商品名称</th>
+                                            <th class="td20">交易平台</th>
+                                            <th class="td10">交易金额</th>
+                                            <th class="td20">激活时间</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="in-detail-con">
+                                    </tbody>
+                                </table>
+                                <div id="pager"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-con-item hidden" data-role="tab-content" data-id="price">
+                <div class="clearfix">
+                    <div class="section clearfix">
+                        <div class="section-item section-last-item cur" data-id="15">30天套餐</div>
+                        <div class="section-item" data-id="20">7天套餐</div>
+                        <div class="section-item" data-id="19">动图套餐</div>
+                    </div>
+                    </div>
+                    <div class="sub-tabview clearfix mt30">
+                        <div class="country-sub clearfix" data-role="head" id="flagb">
+                            <div class="country-sub-item country-last-item" data-role="tab" data-target="in">国内</div>
+                            <div class="country-sub-item" data-role="tab" data-target="out">国外</div>
+                        </div>
+                        <div class="sub-tab-bd mt10" data-role="body">
+                            <div class="sub-tab-con" data-role="tab-content" data-id="in">
+                                <table class="list-table">
+                                    <thead>
+                                        <tr class="t-head">
+                                            <th class="td20">商品图片</th>
+                                            <th class="td20">商品名称</th>
+                                            <th class="td20">销售价格</th>
+                                            <th class="td20">操作</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="in-price-con">
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="sub-tab-con hidden" data-role="tab-content" data-id="out">
+                                <table class="list-table">
+                                    <thead>
+                                        <tr class="t-head">
+                                            <th class="td20">商品图片</th>
+                                            <th class="td20">商品名称</th>
+                                            <th class="td20">销售价格</th>
+                                            <th class="td20">操作</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="out-price-con">
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-con-item hidden" data-role="tab-content" data-id="detailCount">
+                    <div class="btn-bar clearfix">
+                        <span class="search-btn btn-green" id="detail_search">查询</span>
+                        <div class="date-item clearfix">
+                            <label>结束时间</label>
+                            <input type="text" class="date" id="endTime" readonly="readonly">
+                        </div>
+                        <div class="date-item clearfix">
+                            <label>开始时间</label>
+                            <input type="text" class="date" id="startTime" readonly="readonly">
+                        </div>
+                    </div>
+                    <div class="country-sub" id="detailCountSub">
+                        <div class="country-sub-item country-last-item" id="dcs" data-id="1">国内</div>
+                        <div class="country-sub-item" data-id="2">国外</div>
+                    </div>
+                    <table class="list-table" id="detailCount-con">
+                    </table>
+                </div>
+                <div class="tab-con-item hidden" data-role="tab-content" data-id="newCount">
+                    <div class="btn-bar clearfix">
+                        <span class="search-btn btn-green" id="new-search">查询</span>
+                        <div class="date-item clearfix">
+                            <label>结束时间</label>
+                            <input type="text" class="date" id="new-amount-endtime" readonly="readonly">
+                        </div>
+                        <div class="date-item clearfix">
+                            <label>开始时间</label>
+                            <input type="text" class="date" id="new-amount-starttime" readonly="readonly">
+                        </div>
+                    </div>
+                    <div class="clearfix">
+                        <div class="country-sub" id="newCountSub">
+                            <div class="country-sub-item country-last-item" id="nc" data-id="1">国内</div>
+                            <div class="country-sub-item" data-id="2">国外</div>
+                        </div>
+                    </div>
+                    <div class="sub-tabview clearfix mt10">
+                        <div class="sub-tab-list clearfix" data-role="head">
+                            <div class="sub-tab-item cur sub-last-item" data-role="tab" data-target="new-amount">销售额</div>
+                            <div class="sub-tab-item" data-role="tab" data-target="new-quantity">销量</div>
+                        </div>
+                        <div class="sub-tab-bd" data-role="body">
+                            <div class="sub-tab-con" data-role="tab-content" data-id="new-amount">
+                                <div class="echarts" id="new-amount-chart"></div>
+                            </div>
+                            <div class="sub-tab-con hidden" data-role="tab-content" data-id="new-quantity">
+                                <div class="echarts" id="new-quantity-chart"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <table class="list-table">
+                        <thead>
+                            <tr class="t-head">
+                                <th class="td30">时间</th>
+                                <th class="td30" id="n_price"></th>
+                                <th class="td30">销量</th>
+                            </tr>
+                        </thead>
+                        <tbody id="new-con">
+                        </tbody>
+                    </table>
+                </div>
+                <div class="tab-con-item hidden" data-role="tab-content" data-id="channelsCount">
+                    <div class="btn-bar clearfix">
+                        <span class="search-btn btn-green" id="channel-search">查询</span>
+                        <div class="date-item clearfix">
+                            <label>结束时间</label>
+                            <input type="text" class="date" id="channel-amount-endtime" readonly="readonly">
+                        </div>
+                        <div class="date-item clearfix">
+                            <label>开始时间</label>
+                            <input type="text" class="date" id="channel-amount-starttime" readonly="readonly">
+                        </div>
+                    </div>
+                    <div class="clearfix">
+                        <div class="country-sub" id="channelsCountSub">
+                            <div class="country-sub-item country-last-item" id="cc" data-id="1">国内</div>
+                            <div class="country-sub-item" data-id="2">国外</div>
+                        </div>
+                    </div>
+                    <div class="sub-tabview clearfix mt10">
+                        <div class="sub-tab-list clearfix" data-role="head">
+                            <div class="sub-tab-item cur sub-last-item" data-role="tab" data-target="channel-amount">销售额</div>
+                            <div class="sub-tab-item" data-role="tab" data-target="channel-quantity">销量</div>
+                        </div>
+                        <div class="sub-tab-bd" data-role="body">
+                            <div class="sub-tab-con" data-role="tab-content" data-id="channel-amount">
+                                <div class="echarts" id="channel-amount-chart"></div>
+                            </div>
+                            <div class="sub-tab-con hidden" data-role="tab-content" data-id="channel-quantity">
+                                <div class="echarts" id="channel-quantity-chart"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <table class="list-table">
+                        <thead>
+                            <tr class="t-head">
+                                <th class="td30">渠道</th>
+                                <th class="td30" id="c_price"></th>
+                                <th class="td30">销量</th>
+                            </tr>
+                        </thead>
+                        <tbody id="channel-con">
+                        </tbody>
+                    </table>
+                </div>
+                <div class="tab-con-item hidden" data-role="tab-content" data-id="packageCount">
+                    <div class="btn-bar clearfix">
+                        <span class="search-btn btn-green" id="package-search">查询</span>
+                        <div class="date-item clearfix">
+                            <label>结束时间</label>
+                            <input type="text" class="date" id="package-amount-endtime" readonly="readonly">
+                        </div>
+                        <div class="date-item clearfix">
+                            <label>开始时间</label>
+                            <input type="text" class="date" id="package-amount-starttime" readonly="readonly">
+                        </div>
+                    </div>
+                    <div class="clearfix">
+                        <div class="country-sub" id="packageCountSub">
+                            <div class="country-sub-item country-last-item" id="pc" data-id="1">国内</div>
+                            <div class="country-sub-item" data-id="2">国外</div>
+                        </div>
+                    </div>
+                    <div class="sub-tabview clearfix mt10">
+                        <div class="sub-tab-list clearfix" data-role="head">
+                            <div class="sub-tab-item cur sub-last-item" data-role="tab" data-target="package-amount">销售额</div>
+                            <div class="sub-tab-item" data-role="tab" data-target="package-quantity">销量</div>
+                        </div>
+                        <div class="sub-tab-bd" data-role="body">
+                            <div class="sub-tab-con" data-role="tab-content" data-id="package-amount">
+                                <div class="echarts" id="package-amount-chart"></div>
+                            </div>
+                            <div class="sub-tab-con hidden" data-role="tab-content" data-id="package-quantity">
+                                <div class="echarts" id="package-quantity-chart"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <table class="list-table">
+                        <thead>
+                            <tr class="t-head">
+                                <th class="td30">渠道</th>
+                                <th class="td30" id="p_price">销售额</th>
+                                <th class="td30">销量</th>
+                            </tr>
+                        </thead>
+                        <tbody id="package-con">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="x-tmpl-mustache" id="cloudAll-templ">
+        {{#items}}
+        <tr class="tr">
+            <td class="td20">{{pay_month}}</td>
+            <td class="td20">{{finance_name}}</td>
+            <td class="td15">{{amount}}</td>
+            <td class="td15">{{quantity}}</td>
+            <td class="td15">{{foreign_amount}}</td>
+            <td class="td15">{{foreign_quantity}}</td>
+        </tr>
+        {{/items}}
+    </script>
+    <script type="x-tmpl-mustache" id="price-templ">
+        {{#items}}
+        <tr class="tr">
+            <td class="td20"><img src="{{thumbnail}}" class="card-img" alt="" /></td>
+            <td class="td20">{{commodity_name}}</td>
+            <td class="td20"><span class="show-price">{{currency_symbol}} {{show_price}}</span>
+                <input type="text" class="s_p hidden" value="{{show_price}}" data-id="{{show_price}}" />
+            </td>
+            <td class="td20" data-id="{{commodity_id}}">
+                <button class="do-btn exit">修改价格</button>
+                <button class="do-btn confirm hidden">确定</button>
+                <button class="do-btn cancel hidden">取消</button>
+            </td>
+        </tr>
+        {{/items}}
+    </script>
+    <script type="x-tmpl-mustache" id="cloudDetail-templ">
+        {{#items}}
+        <tr class="tr h59">
+            <td class="td20">{{order_no}}</td>
+            <td class="td10">{{avs_cid}}</td>
+            <td class="td20">{{commodity_name}}</td>
+            <td class="td20">{{pay_platform}}</td>
+            <td class="td10">{{price}}</td>
+            <td class="td20">{{active_time}}</td>
+        </tr>
+        {{/items}}
+    </script>
+    <script type="x-tmpl-mustache" id="detailCount-templ">
+        <tr class="tr2 bggray">
+            <th class="td22 bggray"></th>
+            <th class="td13">月付</th>
+            <th class="td13">季付</th>
+            <th class="td13">半年付</th>
+            <th class="td13">年付</th>
+            <th class="td13">销量</th>
+            <th class="td13">销售额（￥）</th>
+        </tr>
+        <tr class="tr2">
+            {{#alipay}}
+            <td class="td22 bggray">支付宝</td>
+            <td class="td13">{{month_quantity}}</td>
+            <td class="td13">{{quarter_quantity}}</td>
+            <td class="td13">{{half_quantity}}</td>
+            <td class="td13">{{year_quantity}}</td>
+            <td class="td13">{{quantity_total}}</td>
+            <td class="td13">{{amount_total}}</td>
+            {{/alipay}}
+        </tr>
+        <tr class="tr2">
+            {{#weixin}}
+            <td class="td22 bggray">微信</td>
+            <td class="td13">{{month_quantity}}</td>
+            <td class="td13">{{quarter_quantity}}</td>
+            <td class="td13">{{half_quantity}}</td>
+            <td class="td13">{{year_quantity}}</td>
+            <td class="td13">{{quantity_total}}</td>
+            <td class="td13">{{amount_total}}</td>
+            {{/weixin}}
+        </tr>
+        <tr class="tr2">
+            {{#iospay}}
+            <td class="td22 bggray">苹果支付</td>
+            <td class="td13">{{month_quantity}}</td>
+            <td class="td13">{{quarter_quantity}}</td>
+            <td class="td13">{{half_quantity}}</td>
+            <td class="td13">{{year_quantity}}</td>
+            <td class="td13">{{quantity_total}}</td>
+            <td class="td13">{{amount_total}}</td>
+            {{/iospay}}
+        </tr>
+        <tr class="tr2">
+            {{#google}}
+            <td class="td22 bggray">Google</td>
+            <td class="td13">{{month_quantity}}</td>
+            <td class="td13">{{quarter_quantity}}</td>
+            <td class="td13">{{half_quantity}}</td>
+            <td class="td13">{{year_quantity}}</td>
+            <td class="td13">{{quantity_total}}</td>
+            <td class="td13">{{amount_total}}</td>
+            {{/google}}
+        </tr>
+        <tr class="tr2">
+            {{#paypal}}
+            <td class="td22 bggray">Pay Pal</td>
+            <td class="td13">{{month_quantity}}</td>
+            <td class="td13">{{quarter_quantity}}</td>
+            <td class="td13">{{half_quantity}}</td>
+            <td class="td13">{{year_quantity}}</td>
+            <td class="td13">{{quantity_total}}</td>
+            <td class="td13">{{amount_total}}</td>
+            {{/paypal}}
+        </tr>
+        <tr class="tr2 bggreen">
+            {{#total}}
+            <td class="td22">总汇</td>
+            <td class="td13">{{month_quantity}}</td>
+            <td class="td13">{{quarter_quantity}}</td>
+            <td class="td13">{{half_quantity}}</td>
+            <td class="td13">{{year_quantity}}</td>
+            <td class="td13">{{quantity_total}}</td>
+            <td class="td13">{{amount_total}}</td>
+            {{/total}}
+        </tr>
+    </script>
+    <script type="x-tmpl-mustache" id="detailCountF-templ">
+        <tr class="tr2 bggray">
+            <th class="td22 bggray"></th>
+            <th class="td13">月付</th>
+            <th class="td13">季付</th>
+            <th class="td13">半年付</th>
+            <th class="td13">年付</th>
+            <th class="td13">销量</th>
+            <th class="td13">销售额（$）</th>
+        </tr>
+        <tr class="tr2">
+            {{#alipay}}
+            <td class="td22 bggray">支付宝</td>
+            <td class="td13">{{month_quantity}}</td>
+            <td class="td13">{{quarter_quantity}}</td>
+            <td class="td13">{{half_quantity}}</td>
+            <td class="td13">{{year_quantity}}</td>
+            <td class="td13">{{quantity_total}}</td>
+            <td class="td13">{{amount_total}}</td>
+            {{/alipay}}
+        </tr>
+        <tr class="tr2">
+            {{#weixin}}
+            <td class="td22 bggray">微信</td>
+            <td class="td13">{{month_quantity}}</td>
+            <td class="td13">{{quarter_quantity}}</td>
+            <td class="td13">{{half_quantity}}</td>
+            <td class="td13">{{year_quantity}}</td>
+            <td class="td13">{{quantity_total}}</td>
+            <td class="td13">{{amount_total}}</td>
+            {{/weixin}}
+        </tr>
+        <tr class="tr2">
+            {{#iospay}}
+            <td class="td22 bggray">苹果支付</td>
+            <td class="td13">{{month_quantity}}</td>
+            <td class="td13">{{quarter_quantity}}</td>
+            <td class="td13">{{half_quantity}}</td>
+            <td class="td13">{{year_quantity}}</td>
+            <td class="td13">{{quantity_total}}</td>
+            <td class="td13">{{amount_total}}</td>
+            {{/iospay}}
+        </tr>
+        <tr class="tr2">
+            {{#google}}
+            <td class="td22 bggray">Google</td>
+            <td class="td13">{{month_quantity}}</td>
+            <td class="td13">{{quarter_quantity}}</td>
+            <td class="td13">{{half_quantity}}</td>
+            <td class="td13">{{year_quantity}}</td>
+            <td class="td13">{{quantity_total}}</td>
+            <td class="td13">{{amount_total}}</td>
+            {{/google}}
+        </tr>
+        <tr class="tr2">
+            {{#paypal}}
+            <td class="td22 bggray">Pay Pal</td>
+            <td class="td13">{{month_quantity}}</td>
+            <td class="td13">{{quarter_quantity}}</td>
+            <td class="td13">{{half_quantity}}</td>
+            <td class="td13">{{year_quantity}}</td>
+            <td class="td13">{{quantity_total}}</td>
+            <td class="td13">{{amount_total}}</td>
+            {{/paypal}}
+        </tr>
+        <tr class="tr2 bggreen">
+            {{#total}}
+            <td class="td22">总汇</td>
+            <td class="td13">{{month_quantity}}</td>
+            <td class="td13">{{quarter_quantity}}</td>
+            <td class="td13">{{half_quantity}}</td>
+            <td class="td13">{{year_quantity}}</td>
+            <td class="td13">{{quantity_total}}</td>
+            <td class="td13">{{amount_total}}</td>
+            {{/total}}
+        </tr>
+    </script>
+    <script type="x-tmpl-mustache" id="new-templ">
+        {{#items}}
+        <tr class="tr2">
+            <td class="td30">{{date}}</td>
+            <td class="td30">{{amount}}</td>
+            <td class="td30">{{quantity}}</td>
+        </tr>
+        {{/items}}
+    </script>
+    <script type="x-tmpl-mustache" id="channel-templ">
+        {{#items}}
+        <tr class="tr2">
+            <td class="td30">{{pay_platform}}</td>
+            <td class="td30">{{amount}}</td>
+            <td class="td30">{{quantity}}</td>
+        </tr>
+        {{/items}}
+    </script>
+    <script type="x-tmpl-mustache" id="package-templ">
+        {{#items}}
+        <tr class="tr2">
+            <td class="td30">{{package_name}}</td>
+            <td class="td30">{{amount}}</td>
+            <td class="td30">{{quantity}}</td>
+        </tr>
+        {{/items}}
+    </script>
+    <!-- 页面脚本 -->
+    <script src="js/jsboot.js"></script>
+    <script>
+    SrcBoot.output([
+        'plugins/echarts.min.js',
+        'plugins/tabview.js',
+        'js/fpick/flatpickr.min.js',
+        'js/fpick/flatpickr.l10n.zh.js',
+        'js/datepicker/js/moment.js',
+        'js/datepicker/js/daterangepicker.js',
+        'plugins/pager/jquery.pager.js',
+        'plugins/jquery.cookie.js',
+        'js/func.js',
+        'js/cloudAll.js'
+    ]);
+    </script>
+</body>
+
+</html>

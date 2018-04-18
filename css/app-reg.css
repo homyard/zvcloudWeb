@@ -1,0 +1,126 @@
+/**!
+ * 注册页样式
+ * author: 张智俊;
+ */
+
+.main-con {
+	margin-bottom: 75px;
+	margin-top: 75px;
+}
+.img-div {
+    height: 307px;
+    width: 100%;
+    min-width: 1151px;
+    background: url(../../images/frontstage/banner/banner-co.jpg) no-repeat;
+    background-size: cover;
+}
+
+.left {
+	float: left;
+	width: 450px;
+	padding:0 50px;
+	padding-top: 170px;
+	border-right: 1px solid #ddd;
+	height: 320px;
+}
+
+.right {
+	float: left;
+	width: 525px;
+	padding-top: 35px;
+	padding-left: 75px;
+}
+
+.left h3 {
+	font-size: 40px;
+	line-height: 1.5;
+	color: #191919;
+	text-align: center;
+}
+
+.left h4 {
+	font-size: 30px;
+	line-height: 1.5;
+	color: #191919;
+	text-align: center;
+}
+
+.blue {
+	color: #14c2ff;
+}
+
+.tips {
+	padding-left: 10px;
+	width: 390px;
+	font-size: 14px;
+	color: #c00;
+	line-height: 1.5;
+	margin-bottom: 20px;
+}
+
+.right input {
+	border: 1px solid #ddd;
+	outline: none;
+	width: 390px;
+	padding-left: 10px;
+	height: 40px;
+	margin-bottom: 20px;
+	font-size: 14px;
+}
+
+.yzm input {
+	float: left;
+	width: 250px;
+}
+
+.yzm img {
+	float: left;
+	width: 120px;
+	height: 38px;
+	border: 1px solid #ddd;
+	margin-left: 18px;
+}
+
+.yzm a {
+	float: left;
+	font-size: 14px;
+	margin-left: 5px;
+	text-decoration: underline;
+	color: #14c2ff;
+	line-height: 40px;
+}
+
+// .error-info {
+// 	line-height: 24px;
+// 	font-size: 14px;
+// 	color: #c00;
+// 	visibility:hidden;
+// }
+
+.conf-btn {
+	display: block;
+	width: 400px;
+	height: 50px;
+	color:#fff;
+	text-align: center;
+	font-size: 20px;
+	background-color: #14c2ff;
+	border: 0;
+	outline: none;
+	cursor: pointer;
+	margin-top: 10px;
+}
+
+.tab-item {
+	cursor: pointer;
+	width: 200px;
+	float: left;
+	font-size: 20px;
+	line-height: 30px;
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.tab-item.cur {
+	color:#14c2ff; 
+}

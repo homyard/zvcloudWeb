@@ -1,0 +1,169 @@
+/*
+ *  创建产品页样式
+ *  author: zhangzhijun;
+ *
+ */
+
+.create-main {
+    margin: 0 auto;
+    width: 655px;
+    padding-top: 40px;
+}
+
+.create-l {
+    float: left;
+    width: 415px;
+}
+
+.create-input {
+    width: 307px;
+    height: 36px;
+    float: left;
+    border: 1px solid #aaaaaa;
+    margin-top: 16px;
+    padding-left: 10px;
+    font-size: 16px;
+    line-height: 36px;
+    outline: none;
+}
+
+.create-input:focus {
+    border: 1px solid #19bd9b;
+}
+
+.btn-box {
+    margin-top: 16px;
+    height: 60px;
+    overflow: hidden;
+}
+
+.btn-box button {
+    float: left;
+    width: 149px;
+    height: 43px;
+    font-size: 18px;
+    line-height: 43px;
+    color: #fff;
+    margin-right: 21px;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+}
+
+.c-btn {
+    background-color: #01b3f1;
+}
+
+.x-btn {
+    background-color: #b3b3b3;
+}
+
+.create-r {
+    float: left;
+    width: 238px;
+    height: 258px;
+    border: 1px solid #ddd;
+    margin-top: 16px;
+}
+
+.logo {
+    width: 126px;
+    height: 126px;
+    border: 1px solid #ddd;
+    margin: 0 auto;
+    margin-top: 31px;
+    background: url(../images/backstage/default-logo.jpg) no-repeat;
+}
+
+.logo img {
+    display: block;
+    width: 126px;
+    height: 126px;
+}
+
+.btn_uploader {
+    display: block;
+    width: 126px;
+    height: 33px;
+    border: 1px solid #19bd9b;
+    color: #19bd9b;
+    text-align: center;
+    font-size: 14px;
+    line-height: 33px;
+    margin: 12px auto;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.tips {
+    font-size: 14px;
+    line-height: 14px;
+    color: #666666;
+    text-align: center;
+}
+
+.webuploader-container {
+    position: relative;
+}
+
+.webuploader-element-invisible {
+    position: absolute !important;
+    clip: rect(1px 1px 1px 1px);
+    /* IE6, IE7 */
+    clip: rect(1px, 1px, 1px, 1px);
+}
+
+.webuploader-pick {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.webuploader-pick-hover {}
+
+.webuploader-pick-disable {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.all-num {
+    float: left;
+    font-size: 16px;
+    line-height: 36px;
+    margin-left: 10px;
+    margin-top: 16px;
+}
+
+.selectpick_div {
+    float: left;
+    font-size: 16px;
+    line-height: 36px;
+    border-radius: 0;
+    border: 1px solid #aaa;
+    padding-left: 0;
+}
+
+.selectpick_div_box {
+    margin: 0;
+}
+
+.selectpick_icon {
+    height: 38px;
+}
+
+.sel-item {
+    width: 319px;
+    height: 38px;
+    margin-top: 16px;
+}
+
+.selectpick_options ul li.selectpick_options_selected {
+    background-color: #01b3f1;
+}
+
+.selectpick_options li:hover {
+    background-color: #01b3f1;
+}

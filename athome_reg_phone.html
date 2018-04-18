@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- 禁止用户对页面进行缩放 -->
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="description" content="掌上看家为您专业提供：远程视频监控、手机远程视频监控系统、手机视频客户端监控、手机远程实时监控、远程监控软件、幼儿园远程监控及稳定的远程监控系统平台和监控完美方案、设备、安装、本地监控升级服务，企业级远程监控请认准-掌上管家。 ">
+    <meta name="keywords" content="视频监控,远程监控,远程视频监控,手机远程监控,远程监控软件,远程监控管理平台,监控方案,安防监控系统,幼儿园监控方案">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <script src="js/cssboot.js"></script>
+    <script>
+    SrcBoot.output([
+        'css/common.css',
+        'css/font.css',
+        'plugins/select/easydropdown.css',
+        'css/phone_reg.css'
+    ]);
+    </script>
+    <title>掌上看家</title>
+</head>
+
+<body>
+    <img src="images/phone_reg_title.jpg" alt="" class="reg-img">
+    <div class="main-con clearfix" id="m-con">
+        <p class="invite-p1">接受好友邀请，体验掌上看家免费监控</p>
+        <p class="invite-p2">朋友送你300积分，可以用于兑换云服务</p>
+        <div class="input-item clearfix">
+            <input type="number" placeholder="输入手机号码接受邀请" class="info-input phone-input" id="phone">
+            <select id="phone_sel" class="r">
+                <option value="86">+86</option>
+                <option value="852">+852</option>
+                <option value="853">+853</option>
+                <option value="886">+886</option>
+            </select>
+        </div>
+        <div class="input-item clearfix">
+            <input type="text" placeholder="请输入验证码" class="yzm" id="yzm">
+            <img src="" class="img-yzm" id="img-yzm">
+        </div>
+        <button class="confirm" id="c-confirm">免费领取</button>
+    </div>
+    <img src="images/phone_reg_main.jpg" alt="" class="reg-img">
+    <a href="" class="at-download dl">下载体验</a>
+    <p class="invite-p3 mb2 hidden ad">下载需要打开“应用宝”，如果您没有安装“应用宝”，<br>可以到任意商店搜索“掌上看家”下载。</p>
+    <script type="x-temp" id="success">
+        <img src="images/phone_success.png" alt="" class="success" />
+        <p class="invite-p1 red">300积分已到您的掌上看家账号{{phone}}，</p>
+        <p class="invite-p1 mt0">（用此账号注册为掌上看家新用户即可查收）</p>
+        <p class="invite-p3">下载掌上看家APP并成功注册后，您的好友也将获得相应的积分奖励</p>
+        <a href="" class="confirm dl">下载掌上看家App</a>
+        <p class="invite-p3 hidden ad">下载需要打开“应用宝”，如果您没有安装“应用宝”，<br>可以到任意商店搜索“掌上看家”下载。</p>
+    </script>
+    <script type="x-temp" id="old">
+        <p class="invite-p4">您好，老朋友</p>
+        <p class="invite-p1 red">同一手机号，同一手机设备均视为同一用户，新用户<br>仅限领取一次积分特权。</p>
+        <p class="invite-p3">通过App内“邀请好友”功能，将链接发送给您的好友，<br>下载并注册为新用户时，您将获得更多的奖励。</p>
+        <a href="" class="confirm" id="reset">重新输入手机号</a>
+    </script>
+    <!-- 页面脚本 -->
+    <script src="js/jsboot.js"></script>
+    <script>
+    SrcBoot.output([
+        'plugins/selectpick/js/selectpick.js',
+        'plugins/uuid.js',
+        'plugins/select/jquery.easydropdown.min.js',
+        'js/device.min.js',
+        'js/func.js',
+        'js/common.js',
+        'js/uuid.js',
+        'js/athome_phone.js'
+    ]);
+    </script>
+</body>
+
+</html>

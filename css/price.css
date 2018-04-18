@@ -1,0 +1,200 @@
+/**!
+ * 价格页样式
+ * author: 张智俊;
+ */
+
+.talk {
+    width: 50px;
+    height: 50px;
+    background: url(../images/frontstage/some/talk.png) no-repeat;
+    position: fixed;
+    top: 70%;
+    right: 40px;
+    cursor: pointer;
+    z-index: 9999999;
+}
+
+.talk:hover {
+    background: url(../images/frontstage/some/talk-cur.png) no-repeat;
+}
+
+.img-div {
+    height: 307px;
+    min-width: 1151px;
+    background: url(../images/frontstage/banner/banner-price.jpg) no-repeat;
+    background-size: cover;
+}
+
+.main {
+    padding-bottom: 60px;
+}
+
+.type-title {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    font-size: 36px;
+    line-height: 69px;
+    color: #030303;
+}
+
+.pro-name {
+    float: left;
+    width: 213px;
+    position: relative;
+    margin-bottom: 16px;
+    font-size: 48px;
+    color: #fff;
+    text-align: center;
+}
+
+.standard .pro-name {
+    height: 239px;
+    line-height: 239px;
+    background-color: #01b3f1;
+}
+
+.customized .pro-name {
+    height: 239px;
+    line-height: 239px;
+    background-color: #475577;
+}
+
+.experience .pro-name {
+    height: 136px;
+    background-color: #e96a3d;
+}
+
+.experience .pro-name p {
+    margin-top: 33px;
+    line-height: 48px;
+    margin-bottom: 11px;
+}
+
+.experience .pro-name span {
+    font-size: 20px;
+    line-height: 20px;
+    display: block;
+}
+
+.pro-standard .pro-name {
+    height: 300px;
+    line-height: 300px;
+    background-color: #01b3f1;
+}
+
+.hot {
+    display: block;
+    width: 106px;
+    height: 74px;
+    position: absolute;
+    background: url(../images/frontstage/some/hot-icon.png) no-repeat;
+    right: 0;
+    top: 0;
+}
+
+.pro-info {
+    float: left;
+    width: 780px;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+
+.standard .pro-info,
+.customized .pro-info {
+    height: 237px;
+}
+
+.experience .pro-info {
+    height: 134px;
+}
+
+.pro-standard .pro-info {
+    height: 298px;
+}
+
+.info-list {
+    margin-top: 30px;
+    margin-left: 33px;
+}
+
+.info-item {
+    font-size: 16px;
+    line-height: 16px;
+    color: #030303;
+    padding-left: 37px;
+    margin-bottom: 40px;
+    background: url(../images/frontstage/some/block-point.jpg) 0 center no-repeat;
+}
+
+.last-item {
+    margin-bottom: 0;
+}
+
+.op-btn-box {
+    float: left;
+    border: 1px solid #ddd;
+    width: 155px;
+}
+
+.standard .op-btn-box,
+.customized .op-btn-box {
+    height: 237px;
+}
+
+.experience .op-btn-box {
+    height: 134px;
+}
+
+.pro-standard .op-btn-box {
+    height: 298px;
+}
+
+.op-btn {
+    display: block;
+    width: 107px;
+    height: 50px;
+    margin: 0 auto;
+    font-size: 16px;
+    line-height: 50px;
+    text-align: center;
+}
+
+.color-blue {
+    color: #01b3f1;
+    border: 1px solid #01b3f1;
+}
+.color-blue:hover{
+    background-color:#01b3f1 ;
+    color:#fff;
+}
+
+.color-darkblue {
+    color:#475577;
+    border: 1px solid #475577;
+}
+.color-darkblue:hover{
+    color:#fff;
+   background-color:  #475577;
+}
+
+.color-red {
+    color: #e96a3d;
+    border: 1px solid #e96a3d;
+}
+.color-red:hover{
+    color: #fff;
+    background-color:  #e96a3d;
+}
+
+.standard .op-btn,
+.customized .op-btn {
+    margin-top: 98px;
+}
+
+.experience .op-btn {
+    margin-top: 46px;
+}
+
+.pro-standard .op-btn {
+    margin-top: 129px;
+}

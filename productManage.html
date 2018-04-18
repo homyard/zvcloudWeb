@@ -1,0 +1,73 @@
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="renderer" content="webkit">
+    <!-- 用于响应式网站 -->
+    <!-- <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" /> -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <script src="js/cssboot.js"></script>
+    <script>
+    SrcBoot.output([
+        'css/bcommon.css',
+        'plugins/selectpick/css/selectpick.css',
+        'css/productManage.css',
+        'plugins/pager/pager.css'
+    ]);
+    </script>
+    <title>众云视频后台管理系统</title>
+</head>
+
+<body>
+    <div class="head clearfix">
+        <img src="images/backstage/logo.png" alt="">
+        <div class="user-info">
+            <div class="user-name" id="user-con">
+            </div>
+            <span class="home" id="home"></span>
+            <span class="line-out" id="login-out"></span>
+        </div>
+    </div>
+    <div class="select-box clearfix" id="select-box">
+        <select id="select-con" class="select-con">
+        </select>
+    </div>
+    <div class="left">
+        <div class="left-item cur" id="productDetail" data-id="productDetail.html">
+            <i></i>
+            <span>产品信息</span>
+        </div>
+        <div class="left-item" id="cloudDetail" data-id="cloudDetail.html">
+            <i></i>
+            <span>云存储</span>
+        </div>
+        <div class="left-item" id="back">
+            <i></i>
+            <span>返回</span>
+        </div>
+    </div>
+    <div class="right">
+        <iframe src="productDetail.html" class="r-frame" frameborder="no" border="0"></iframe>
+    </div>
+    <script type="x-tmpl-mustache" id="user-templ">
+        <a href="zvcloudManage.html">{{mobile_phone}}</a>
+    </script>
+    <script type="x-tmpl-mustache" id="select-templ">
+    {{#items}}
+        <option value="{{product_id}}">{{productName}}</option>
+    {{/items}}
+    </script>
+    <!-- 页面脚本 -->
+    <script src="js/jsboot.js"></script>
+    <script>
+    SrcBoot.output([
+        'plugins/selectpick/js/selectpick.js',
+        'plugins/pager/jquery.pager.js',
+        'js/func.js',
+        'js/productManage.js'
+    ]);
+    </script>
+</body>
+
+</html>

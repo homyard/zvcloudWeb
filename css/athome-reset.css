@@ -1,0 +1,186 @@
+.header {
+	height: 85px;
+	border-bottom: 4px solid #626262;
+	background-color: #efefef;
+	padding-top: 22px;
+	position: static;
+}
+
+.logo {
+	width: 232px;
+	height: 60px;
+}
+
+.theme {
+	width: 287px;
+	height: 60px;
+}
+
+.main-con {
+	padding: 190px 0;
+}
+
+.left-con {
+	float: left;
+	height: 313px;
+	width: 475px;
+	border-right: 1px solid #ccc;
+}
+
+.left-con img {
+	display: block;
+	margin-top: 10px;
+}
+
+.right-con {
+	float: left;
+	height: 313px;
+	width: 350px;
+	padding-left: 131px;
+}
+
+.tabview {
+	width: 100%;
+}
+
+
+.tab-head {
+	height: 31px;
+}
+
+.tab-body {
+	margin-top: 43px;
+}
+
+.tab {
+	height: 30px;
+	line-height: 30px;
+	font-size: 18px;
+	color: #333333;
+}
+
+.tab.cur {
+	color: #14c2ff;
+	border-bottom: 1px solid #14c2ff;
+}
+
+.input-item {
+    width: 333px;
+    height: 53px;
+    padding-left: 15px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    line-height: 53px;
+    margin-bottom: 25px;
+}
+
+.input-item input {
+    float: left;
+    border: 0;
+    outline: none;
+    width: 300px;
+    height: 53px;
+    line-height: 53px;
+}
+
+.input-item .check {
+    width: 220px;
+}
+
+.send {
+    float: right;
+    width: 100px;
+    height: 28px;
+    margin-right: 13px;
+    margin-top: 13px;
+    font-size: 12px;
+    line-height: 28px;
+    text-align: center;
+    color: #333;
+    background: url(../images/backstage/check-bg.png) no-repeat;
+}
+
+.btn-box {
+	width: 350px;
+	height: 54px;
+}
+
+.confirm {
+	cursor: pointer;
+	width: 100%;
+	height: 54px;
+	border: 0;
+	outline: none;
+	background-color: #f16161;
+	font-size: 18px;
+	color: #fff;
+	margin-right: 28px;
+}
+
+// .cancel {
+// 	cursor: pointer;
+// 	float: left;
+// 	width: 161px;
+// 	height: 54px;
+// 	border: 0;
+// 	outline: none;
+// 	background-color: #adadad;
+// 	font-size: 18px;
+// 	color: #fff;
+// }
+
+.mt49 {
+	margin-top: 49px;
+}
+
+
+.tips {
+	font-size:12px;
+	line-height: 18px;
+	margin-top: 13px;
+	color: #a9a9a9; 
+}
+
+.mt68 {
+	margin-top: 68px;
+}
+
+.t1 {
+	font-size: 18px;
+	font-weight: bold;
+	text-align: center;
+	line-height: 30px;
+	margin-bottom: 30px;
+}
+
+.loading {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    filter: alpha(opacity=60);
+    background-color: #fff;
+    z-index: 1002;
+    left: 0px;
+    opacity: 0.5;
+    -moz-opacity: 0.5;
+}
+
+
+.loading img {
+    position: absolute;
+    // margin-top: -18px;
+    top: 50%;
+    left: 50%;
+    margin-left: -18px;
+}
+
+.footer {
+	height: 68px;
+	background-color: #626262;
+	font-size: 12px;
+	line-height: 68px;
+	color: #fff;
+	text-align: center;
+}

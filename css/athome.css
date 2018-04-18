@@ -1,0 +1,230 @@
+.header {
+    height: 85px;
+    border-bottom: 4px solid #ff866f;
+    background-color: #2d3e50;
+    padding-top: 22px;
+    position: static;
+}
+
+.logo {
+    width: 232px;
+    height: 60px;
+}
+
+.theme {
+    font-size: 
+}
+
+.main-con {
+    padding: 190px 0;
+    width: 468px;
+    margin: 0 auto;
+}
+
+.left-con {
+    float: left;
+    height: 313px;
+    width: 475px;
+    border-right: 1px solid #ccc;
+}
+
+.left-con img {
+    display: block;
+    margin-top: 60px;
+    margin-left: 60px;
+}
+
+.right-con {
+    float: left;
+    height: 313px;
+    width: 350px;
+    padding-left: 131px;
+}
+
+.tabview {
+    width: 100%;
+}
+
+.tab-head {
+    height: 31px;
+}
+
+.tab-body {
+    margin-top: 43px;
+}
+
+.tab {
+    height: 30px;
+    line-height: 30px;
+    font-size: 18px;
+    color: #333333;
+}
+
+.tab.cur {
+    color: #14c2ff;
+    border-bottom: 1px solid #14c2ff;
+}
+
+.input-item {
+    width: 350px;
+    height: 45px;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.input-item input {
+    width: 318px;
+    height: 43px;
+    padding: 0 15px;
+    border: 1px solid #ccc;
+    float: left;
+    outline: none;
+}
+
+.input-item input {
+    width: 318px;
+    height: 43px;
+    padding: 0 15px;
+    border: 1px solid #ccc;
+    float: left;
+    outline: none;
+}
+
+.input-item .check {
+    width: 220px;
+}
+
+.input-item .yzm {
+	width: 200px;
+	margin-right: 15px;
+}
+
+.img-yzm {
+	float: left;
+	width: 101px;
+	height: 43px;
+	border: 1px solid #ccc;
+}
+
+.send {
+    float: right;
+    width: 100px;
+    height: 28px;
+    margin-right: 13px;
+    margin-top: 13px;
+    font-size: 12px;
+    line-height: 28px;
+    text-align: center;
+    color: #333;
+    background: url(../images/backstage/check-bg.png) no-repeat;
+}
+
+.btn-box {
+    width: 350px;
+    height: 54px;
+}
+
+.confirm {
+    display: block;
+    text-align: center;
+    line-height: 54px;
+    cursor: pointer;
+    width: 100%;
+    height: 54px;
+    border: 0;
+    outline: none;
+    background-color: #fc6d31;
+    font-size: 18px;
+    color: #fff;
+    margin-top: 30px;
+}
+
+// .cancel {
+// 	cursor: pointer;
+// 	float: left;
+// 	width: 161px;
+// 	height: 54px;
+// 	border: 0;
+// 	outline: none;
+// 	background-color: #adadad;
+// 	font-size: 18px;
+// 	color: #fff;
+// }
+
+
+.mt49 {
+    margin-top: 49px;
+}
+
+.tips {
+    font-size: 12px;
+    line-height: 18px;
+    margin-top: 13px;
+    color: #a9a9a9;
+}
+
+.help {
+	font-size: 12px;
+	line-height: 30px;
+	color: #ee6353;
+}
+
+.mt68 {
+    margin-top: 68px;
+}
+
+.t1 {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 30px;
+    margin-bottom: 30px;
+}
+
+.at {
+    width: 100%;
+    font-size: 18px;
+    line-height: 30px;
+    color: #60605f;
+    text-indent: 18px;
+}
+
+.strong {
+    font-size: 30px;
+}
+
+.at-tips {
+    margin-top: 25px;
+    font-size: 16px;
+    line-height: 28px;
+    color: #fc6d31;
+}
+
+.mb0 {
+	margin-bottom: 0;
+}
+
+.footer {
+    height: 68px;
+    background-color: #626262;
+    font-size: 12px;
+    line-height: 68px;
+    color: #fff;
+    text-align: center;
+}
+
+.reg-head {
+    font-size: 30px;
+    color: #60605f;
+    margin-bottom: 50px;
+}
+
+.success {
+    font-size: 30px;
+    margin-bottom: 35px;
+    color: #2f3d4c;
+}
+
+.color-o {
+    color: #fc6d31;
+}

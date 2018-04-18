@@ -1,0 +1,138 @@
+/**!
+ * 后台 - 绑定手机样式
+ * author: 张智俊;
+ */
+
+.main-content {
+	width: 1000px;
+	margin: 0 auto;
+}
+.r-hd {
+	overflow: hidden;
+	height: 58px;
+}
+.r-hd h4 {
+	float: left;
+	font-size: 18px;
+	line-height: 58px;
+	color: #2a2a2a;
+}
+
+.change-info {
+	float: right;
+	display: block;
+	width: 89px;
+	height: 28px;
+	border: 1px solid #19bd9b;
+	font-size: 16px;
+	line-height: 28px;
+	text-align: center;
+	color: #19bd9b;
+	cursor: pointer;
+	margin-top: 14px;
+}
+
+.r-bd {
+	padding-top: 100px;
+	min-width: 900px;
+	min-height: 500px;
+	overflow:hidden;
+	background-color: #fff;
+}
+
+.binding-tips {
+	text-align: center;
+	font-size: 16px;
+	line-height: 30px;
+	color: #8a8a8a;
+}
+
+.binding-item {
+	width: 450px;
+	height: 55px;
+	margin: 0 auto;
+	margin-top: 25px;
+
+}
+
+.binding-item label {
+	float: left;
+	width: 100px;
+	font-size: 16px;
+	color: #8a8a8a;
+	line-height: 55px;
+}
+
+.binding-item>input {
+	float: left;
+	width: 328px;
+	height: 53px;
+	border: 1px solid #ccc;
+	padding-left: 20px;
+	outline: none;
+	font-size: 16px;
+	line-height: 53px;
+}
+
+.input-item {
+	float: left;
+	width: 348px;
+	height: 53px;
+	border: 1px solid #ccc;
+}
+
+.input-item input {
+	float: left;
+	width: 203px;
+	height: 53px;
+	border: 0;
+	outline: none;
+	padding-left: 20px;
+	margin-right: 10px;
+	font-size: 16px;
+	line-height: 53px;
+}
+
+.confirm {
+	display: block;
+	width: 350px;
+	height: 55px;
+	color: #fff;
+	font-size: 18px;
+	background-color: #f16161;
+	margin-left: 375px;
+	margin-top: 25px;
+	border: 0;
+	outline: none;
+	cursor: pointer;
+}
+
+.send {
+    display: block;
+    width: 350px;
+    height: 55px;
+    margin-left: 375px;
+	margin-top: 25px;
+    font: 16px/55px "Microsoft YaHei";
+    text-align: center;
+    color: #333;
+    background-color: #f1f1f1;
+}
+
+.img-code-text {
+    float: left;
+    width: 163px;
+    height: 53px;
+    padding-left: 15px;
+    margin: 0 20px 25px 0;
+    font: 16px/53px "Microsoft YaHei";
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+.img-code {
+    float: left;
+    width: 148px;
+    height: 53px;
+    border: 1px solid #ccc;
+}

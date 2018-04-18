@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="renderer" content="webkit">
+    <!-- 用于响应式网站 -->
+    <!-- <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" /> -->
+    <script src="js/cssboot.js"></script>
+    <script>
+    SrcBoot.output([
+        'css/common.css',
+        'css/add-app.css'
+    ]);
+    </script>
+    <title>后台 - 新增app</title>
+</head>
+
+<body>
+    <div class="app-list ml1 clearfix">
+        <div class="app-item" data-id="4">
+            <img src="images/frontstage/sdk/icon_android.png">
+            <span>Android</span>
+        </div>
+        <div class="app-item" data-id="2">
+            <img src="images/frontstage/sdk/icon_ios.png">
+            <span>IOS</span>
+        </div>
+        <div class="app-item" data-id="5">
+            <img src="images/frontstage/sdk/icon_linux.png">
+            <span>Linux</span>
+        </div>
+        <div class="app-item" data-id="1">
+            <img src="images/frontstage/sdk/icon_win.png">
+            <span>Windows</span>
+        </div>
+    </div>
+    <!-- 页面脚本 -->
+    <script src="js/jsboot.js"></script>
+    <script>
+    SrcBoot.output([
+        'js/func.js',
+        'js/add-app.js'
+    ]);
+    </script>
+</body>
+
+</html>

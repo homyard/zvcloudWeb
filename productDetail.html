@@ -1,0 +1,303 @@
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="renderer" content="webkit">
+    <!-- 用于响应式网站 -->
+    <!-- <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" /> -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <script src="js/cssboot.js"></script>
+    <script>
+    SrcBoot.output([
+        'css/bcommon.css',
+        'plugins/select/easydropdown.css',
+        'css/table.css',
+        'js/fpick/flatpickr.min.css',
+        'css/productDetail.css',
+        'plugins/pager/pager.css',
+    ]);
+    </script>
+    <style type="text/css">
+        .layui-layer-title {
+            background-color: #19bd9b!important;
+            color: #fff!important;
+        }
+    </style>
+    <title>众云视频后台管理系统</title>
+</head>
+
+<body>
+    <div class="main-con">
+        <div class="tabview">
+            <div class="tab-head clearfix" data-role="head">
+                <div class="tab-head-item cur" data-role="tab" data-target="product_info" id="product_info">
+                    产品信息
+                </div>
+                <div class="tab-head-item" data-role="tab" data-target="product_detail" id="product_detail">
+                    产品详情
+                </div>
+                <div class="tab-head-item" data-role="tab" data-target="manual_auth" id="manual_auth">
+                    手动授权
+                </div>
+                <div class="tab-head-item last-item" data-role="tab" data-target="model_auth" id="model_auth">
+                    模板授权
+                </div>
+            </div>
+            <div class="tab-con" data-role="body">
+                <div class="tab-con-item" data-role="tab-content" data-id="product_info">
+                    <div class="btn-bar clearfix">
+                        <span class="btn-green" id="change-info">信息编辑</span>
+                    </div>
+                    <div class="info-main" id="product-info-con"></div>
+                    <p class="copy-tips">提示：单击app图标可复制appid,低版本IE请手动复制</p>
+                    <h4 class="os-title">观看端</h4>
+                    <div class="os-list clearfix">
+                        <div class="item-list" id="client-con">
+                        </div>
+                        <div class="os-add" id="v-add">
+                        </div>
+                    </div>
+                    <h4 class="os-title">采集端</h4>
+                    <div class="os-list clearfix">
+                        <div class="item-list" id="avs-con">
+                        </div>
+                        <div class="os-add" id="g-add">
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-con-item hidden" data-role="tab-content" data-id="product_detail">
+                    <div id="flag" class="hidden"></div>
+                    <div class="type-license hidden">
+                        <div class="info-hd clearfix">
+                            <h4>授权详情</h4>
+                            <span class="btn-red" id="dl-info">下载详情</span>
+                        </div>
+                        <div class="info-bd">
+                            <div class="info-item clearfix">
+                                <label>授权数量：</label>
+                                <p id="allc"></p>
+                            </div>
+                            <div class="info-item clearfix">
+                                <label>使用数量：</label>
+                                <p id="actc"></p>
+                            </div>
+                            <div class="info-item clearfix">
+                                <label>激活数量：</label>
+                                <p id="surc"></p>
+                            </div>
+                            <p class="red-tips">注：“使用数量”表示已经分配License的数量 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;“激活数量”表示已经成功接入设备运行的License数量</p>
+                        </div>
+                        <div class="info-hd clearfix">
+                            <h4>授权列表</h4>
+                            <span class="search-btn btn-green" id="search_l">查询</span>
+                            <div class="search-item clearfix">
+                                <select id="status">
+                                    <option value="" class="label">状态</option>
+                                    <option value="">全部</option>
+                                    <option value="1">激活</option>
+                                    <option value="0">未激活</option>
+                                </select>
+                            </div>
+                            <div class="search-item clearfix">
+                                <label>结束时间</label>
+                                <input type="text" id="endTime" readonly="readonly">
+                            </div>
+                            <div class="search-item clearfix">
+                                <label>起始时间</label>
+                                <input type="text" id="startTime" readonly="readonly">
+                            </div>
+                            <div class="search-item clearfix">
+                                <label>CID</label>
+                                <input type="text" id="license_c_s">
+                            </div>
+                            <div class="search-item clearfix">
+                                <label>License</label>
+                                <input type="text" id="license_l_s">
+                            </div>
+                        </div>
+                        <table class="list-table">
+                            <thead>
+                                <tr class="t-head"> 
+                                    <th class="td10">序号</th>
+                                    <th class="td20">License</th>
+                                    <th class="td20">cid</th>
+                                    <th class="td10">状态</th>
+                                    <th class="td20">创建时间</th>
+                                    <th class="td20">激活时间</th>
+                                </tr>
+                            </thead>
+                            <tbody id="license-con">
+                            </tbody>
+                        </table>
+                        <div id="pager-l"></div>
+                    </div>
+                    <div class="type-other hidden">
+                        <div class="info-hd clearfix">
+                            <h4>授权列表</h4>
+                            <span class="btn-red" id="dl-info-other">下载详情</span>
+                            <span class="search-btn btn-green" id="search_s">查询</span>
+                            <div class="search-item clearfix">
+                                <label>CID</label>
+                                <input type="text" id="service_c_s">
+                            </div>
+                        </div>
+                        <table class="list-table">
+                            <thead>
+                                <tr class="t-head">
+                                    <th class="td10">序号</th>
+                                    <th class="td20">cid</th>
+                                    <th class="td20">appID</th>
+                                    <th class="td10">版本号</th>
+                                    <th class="td20">创建时间</th>
+                                    <th class="td20">更新时间</th>
+                                </tr>
+                            </thead>
+                            <tbody id="other-con">
+                            </tbody>
+                        </table>
+                        <div id="pager-o"></div>
+                    </div>
+                </div>
+                <div class="tab-con-item hidden" data-role="tab-content" data-id="manual_auth">
+                    <div class="auth-main">
+                        <div class="auth-hd clearfix">
+                            <h4>填写需要授权的设备ID </h4>
+                        </div>
+                        <div class="auth-bd">
+                            <p class="auth-num">剩余授权数量 ：<span class="a-num" id="manual-num"></span> 个 </p>
+                            <div class="text-main clearfix">
+                                <textarea class="auth-text" autocomplete="off" id="manual-text"></textarea>
+                                <div class="auth-info">
+                                    <p class="auth-p">请按以下示例格式填写需要授权的设备ID,</p>
+                                    <p class="auth-p mb25">每个ID间需要分号隔开 </p>
+                                    <p class="ex-p">jh153001;</p>
+                                    <p class="ex-p">jh283400;</p>
+                                    <p class="ex-p mb25">jh152540;</p>
+                                    <p class="auth-tips">注：设备ID授权后不可修改请谨慎填写</p>
+                                </div>
+                            </div>
+                            <div class="auth-btn-box">
+                                <a href="javascript:;" class="auth-active" id="manual-active">激活</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="a-tips hidden">
+                        非License授权无法手动添加License
+                    </div>
+                </div>
+                <div class="tab-con-item hidden" data-role="tab-content" data-id="model_auth">
+                    <div class="auth-main">
+                        <div class="auth-hd clearfix">
+                            <h4>填写需要授权的设备ID </h4>
+                        </div>
+                        <div class="auth-bd">
+                            <p class="auth-num">剩余授权数量 ：<span class="a-num" id="model-num"></span> 个 </p>
+                            <div class="text-main clearfix">
+                                <textarea class="model-text" disabled="disabled" id="model-text"></textarea>
+                                <div class="auth-info">
+                                    <p class="auth-p mb25">上传导入前，请先下载导入模板进行编辑。</p>
+                                    <a href="javascript:;" class="dl-btn" id="dl-temp">下载模板</a>
+                                    <a href="javascript:;" class="up-btn" id="fileUploader">上传导入</a>
+                                    <p class="auth-tips model-tips">注：导入数量不可超过剩余可授权数量，并严格保持导入</p>
+                                    <p class="auth-tips model-tips">模板格式,一次最多支持10000条License授权。</p>
+                                </div>
+                            </div>
+                            <div class="auth-btn-box">
+                                <a href="javascript:;" class="auth-active" id="model-active">激活</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="a-tips hidden">
+                        非License授权无法手动添加License
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="loading hidden">
+        <img src="images/backstage/loading.gif" id="loading">
+    </div>
+    <script type="x-tmpl-mustache" id="product-info-templ">
+        <div class="logo">
+            <img src="{{logo_uri}}">
+        </div>
+        <div class="pro-info-main">
+            <div class="pro-info-item clearfix">
+                <label>产品名称：</label>
+                <p>{{productName}}</p>
+            </div>
+            <div class="pro-info-item clearfix">
+                <label>产品类型：</label>
+                <p>{{product_type_name}}</p>
+            </div>
+            <div class="pro-info-item clearfix">
+                <label>隐私级别：</label>
+                <p>{{private_level_name}}</p>
+            </div>
+            <div class="pro-info-item clearfix">
+                <label>授权方式：</label>
+                <p>{{auth_type_name}}</p>
+            </div>
+            {{#auth_type_flag}}
+            <div class="pro-info-item pro-last-item clearfix">
+                <label>授权数量（默认提供100个测试授权）：</label>
+                <p>{{total_count}}</p>
+            </div>
+            {{/auth_type_flag}}
+        </div>
+    </script>
+    <script type="x-tmpl-mustache" id="os-templ">
+        {{#items}}
+        <div class="os-item" data-clipboard-text="{{app_id}}" data-id="{{app_id}}">
+            <img src="images/frontstage/sdk/{{osImg}}.png" alt="">
+            <p class="os-type">{{os_type}}</p>
+            <p class="app-id">AppID</p>
+            <p class="app-id">{{app_id}}</p>
+        </div>
+        {{/items}}
+    </script>
+    <script type="x-tmpl-mustache" id="license-templ">
+        {{#items}}
+        <tr class="tr2">
+            <td class="td10">{{num}}</td>
+            <td class="td20">{{license}}</td>
+            <td class="td20">{{cid}}</td>
+            <td class="td10" data-id={{status}}>{{status_name}}</td>
+            <td class="td20">{{create_time}}</td>
+            <td class="td20">{{active_time}}</td>
+        </tr>
+        {{/items}}
+    </script>
+    <script type="x-tmpl-mustache" id="other-templ">
+        {{#items}}
+        <tr class="tr2">
+            <td class="td10">{{num}}</td>
+            <td class="td20">{{cid}}</td>
+            <td class="td20">{{app_id}}</td>
+            <td class="td10">{{plat_version}}</td>
+            <td class="td20">{{create_time}}</td>
+            <td class="td20">{{update_time}}</td>
+        </tr>
+        {{/items}}
+    </script>
+
+    <!-- 页面脚本 -->
+    <script src="js/jsboot.js"></script>
+    <script>
+    SrcBoot.output([
+        'plugins/tabview.js',
+        'plugins/select/jquery.easydropdown.min.js',
+        'plugins/webuploader/webuploader.min.js',
+        'plugins/zclip/ZeroClipboard.js',
+        'plugins/selectpick/js/selectpick.js',
+        'plugins/pager/jquery.pager.js',
+        'js/fpick/flatpickr.min.js',
+        'js/fpick/flatpickr.l10n.zh.js',
+        'js/func.js',
+        'js/productDetail.js'
+    ]);
+    </script>
+</body>
+
+</html>

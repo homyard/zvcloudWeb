@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="renderer" content="webkit">
+    <!-- 用于响应式网站 -->
+    <!-- <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" /> -->
+    <script src="js/cssboot.js"></script>
+    <script>
+    SrcBoot.output([
+        'css/common.css',
+    ]);
+    </script>
+    <title>后台 - 登陆</title>
+</head>
+
+<body>
+    <div class="lo-box">
+        <h4>登录</h4>
+        <input type="text" class="lo-input" id="lo-user" placeholder="请输入用户名" autocomplete="off"/>
+        <input type="password" class="lo-input" id="lo-pwd" autocomplete="new-password" placeholder="请输入密码" />
+        <div class="ser-box clearfix"><a href="#" class="re-pwd" id="re-pwd">忘记密码</a> <a href="#" class="lo-reg">立即注册</a></div>
+        <div class="btn-box clearfix">
+            <button class="cancel-btn" id="c-btn">取消</button>
+            <button class="login-btn" id="l-btn">登录</button>
+        </div>
+    </div>
+    <!-- 页面脚本 -->
+    <script src="js/jsboot.js"></script>
+    <script>
+    SrcBoot.output([
+        'js/func.js',
+        'js/common.js',
+        'js/login.js'
+    ]);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+/**!
+ * 新闻页样式
+ * author: 张智俊;
+ */
+
+.img-div {
+    height: 307px;
+    min-width: 1151px;
+    background: url(../images/frontstage/banner/banner-news.jpg) no-repeat;
+    background-size: cover;
+}
+
+.n-logo {
+	margin: 60px 0 10px;
+	display: block;
+	width: 300px;
+	height: 85px;
+}
+.com-info {
+	font-size: 20px;
+	line-height: 100px;
+	color: #a1a1a1;
+	padding-left: 10px;
+}
+ .article {
+ 	padding: 30px;
+ 	border-top: 1px solid #ddd;
+ }
+
+ .author-info {
+ 	display: block;
+	font-size: 14px;
+	line-height: 24px;
+	margin-bottom: 20px;
+	color: #a1a1a1;
+ }
+
+ .article h3 {
+ 	font-size: 25px;
+ 	color: #191919;
+ 	line-height: 35px;
+ 	margin-bottom: 20px;
+ }
+
+ .article p {
+ 	font-size: 16px;
+ 	color: #191919;
+ 	text-indent: 2em;
+ 	line-height: 28px;
+ 	margin: 20px 0;
+ }
+
+ .article img {
+ 	display: block;
+ 	margin: 30px auto;
+ }
+
+ .zz {
+ 	font-size: 20px;
+ 	color:#C0C0C0;
+ }

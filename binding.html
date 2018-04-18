@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="renderer" content="webkit">
+    <!-- 用于响应式网站 -->
+    <!-- <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" /> -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <script src="js/cssboot.js"></script>
+    <script>
+    SrcBoot.output([
+        'css/common.css',
+        'css/document.css',
+        'css/binding.css'
+    ]);
+    </script>
+    <title>绑定手机号</title>
+</head>
+
+<body>
+    <!-- header -->
+    <div class="header">
+        <div class="glass"></div>
+        <div class="container head-main clearfix">
+            <!-- logo -->
+            <img src="images/frontstage/some/logo-index1.png" class="logo l" />
+            <!-- nav -->
+            <ul class="nav l clearfix">
+                <li class="nav-item">
+                    <a href="index.html">首页</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="solution">解决方案</a>
+                </li>
+                <li class="nav-item">
+                    <a href="cooperation.html">合作案例</a>
+                </li>
+                <li class="nav-item">
+                    <a href="price.html">价格</a>
+                </li>
+                <li class="nav-item">
+                    <a href="SDK.html">SDK开发</a>
+                </li>
+                <li class="nav-item">
+                    <a href="documents.html">文档</a>
+                </li>
+                <li class="nav-item">
+                    <a href="news-list.html">新闻动态</a>
+                </li>
+                <li class="nav-item">
+                    <a href="aboutus.html">关于我们</a>
+                </li>
+            </ul>
+            <div class="h-btn-box l clearfix" id="user-con">
+                <a href="javascript:;" class="h-btn" id="login-out">注销</a>
+            </div>
+        </div>
+    </div>
+    <div class="img-div">
+        <p class="img_words">我们是物联网领域的视频运营服务商</p>
+    </div>
+    <div class="main-content">
+        <div class="r-bd" id="account">
+            <p class="binding-tips">亲爱的用户您好，为保障您的信息安全，我们对网站进行了升级优化，需要将您的账号绑定手机号码。</p>
+            <p class="binding-tips">感谢您的配合和对我们产品的支持，我们将持续不断的提升产品的安全和服务的品质！</p>
+            <div class="binding-item clearfix">
+                <label>手机号</label>
+                <input type="text" placeholder="可作为众云登录账号" id="phone">
+            </div>
+            <div class="binding-item clearfix">
+                <label>图片验证码</label>
+                <div class="input-box l clearfix">
+                    <input type="text" class="img-code-text" id="img-code-text" placeholder="图片验证码">
+                    <img src="" alt="图片验证码" class="img-code" id="img-code">
+                </div>
+            </div>
+            <a href="javascript:;" class="send" id="send">发送验证码</a>
+            <div class="binding-item clearfix">
+                <label>短信验证码</label>
+                <input type="text" placeholder="短信验证码" id="verif">
+            </div>
+            <button class="confirm" id="confirm">确认绑定</button>
+        </div>
+    </div>
+    <!-- footer -->
+    <div id="footer">
+        <script type="text/javascript">
+        $("#footer").load("footer.html");
+        </script>
+    </div>
+    <!-- 页面脚本 -->
+    <script src="js/jsboot.js"></script>
+    <script>
+    SrcBoot.output([
+        'plugins/tabview.js',
+        'plugins/uuid.js',
+        'js/uuid.js',
+        'js/func.js',
+        'js/binding.js'
+    ]);
+    </script>
+</body>
+
+</html>

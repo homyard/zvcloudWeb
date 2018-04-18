@@ -1,0 +1,197 @@
+/**
+ *	众云视频后台管理系统样式
+ *	author: zhangzj;
+ *
+ */
+
+html,body {
+    font-family: "Microsoft YaHei";
+}
+.head {
+    height: 99px;
+    border-top: 1px solid #14c2ff;
+    border-bottom: 8px solid #c5c5c5;
+    overflow: hidden;
+    background-color: #3a414e;
+}
+
+.head img {
+    float: left;
+    margin-top: 28px;
+    margin-left: 22px;
+}
+
+.user-info {
+    float: right;
+    margin-top: 40px;
+}
+
+.user-name {
+    float: left;
+    height: 24px;
+    background: url(../images/backstage/user-icon.png) 0 center no-repeat;
+    padding-left: 35px;
+    color: #fff;
+    margin-right: 50px;
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.user-name a {
+    color: #fff;
+}
+
+.home {
+    float: left;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    margin-right: 40px;
+    background: url(../images/backstage/home.png) center no-repeat;
+}
+
+.settings {
+    float: left;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    margin-right: 40px;
+    background: url(../images/backstage/settings.png) center no-repeat;
+}
+
+.line-out {
+    float: left;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    margin-right: 40px;
+    background: url(../images/backstage/line-out.png) center no-repeat;
+}
+
+.left {
+    width: 161px;
+    background-color: #e4e4e4;
+    position: absolute;
+    left: 0;
+    top: 108px;
+    bottom: 0;
+    overflow: hidden;
+}
+
+.left-item {
+    height: 94px;
+    padding-top: 36px;
+    cursor: pointer;
+}
+
+.left-item.cur {
+    background: url(../images/backstage/left-cur.png) left top no-repeat #f5f5f5;
+}
+
+.left-item span {
+    font-size: 18px;
+    color: #3a414e;
+    display: block;
+    text-align: center;
+}
+
+.left-item.cur span {
+    color: #01b3f1;
+}
+
+#account i {
+    display: block;
+    width: 30px;
+    height: 33px;
+    margin: 0 auto;
+    background: url(../images/backstage/acc-setting.png) no-repeat;
+    margin-bottom: 11px;
+}
+
+#account.cur i {
+    background: url(../images/backstage/acc-setting-cur.png) no-repeat;
+}
+
+#productList i {
+    display: block;
+    width: 31px;
+    height: 31px;
+    margin: 0 auto;
+    background: url(../images/backstage/app-control.png) no-repeat;
+    margin-bottom: 13px;
+}
+
+#productList.cur i {
+    background: url(../images/backstage/app-control-cur.png) no-repeat;
+}
+
+#productDetail i {
+    display: block;
+    width: 31px;
+    height: 31px;
+    margin: 0 auto;
+    background: url(../images/backstage/product-detail.png) no-repeat;
+    margin-bottom: 13px;
+}
+
+#productDetail.cur i {
+    background: url(../images/backstage/product-detail-cur.png) no-repeat;
+}
+
+#cloud i {
+    display: block;
+    width: 41px;
+    height: 35px;
+    margin: 0 auto;
+    background: url(../images/backstage/cloud_icon.png) no-repeat;
+    margin-bottom: 9px;
+}
+
+#cloud.cur i {
+    background: url(../images/backstage/cloud_icon_cur.png) no-repeat;
+}
+
+#cloudDetail i {
+    display: block;
+    width: 41px;
+    height: 35px;
+    margin: 0 auto;
+    background: url(../images/backstage/cloud_icon.png) no-repeat;
+    margin-bottom: 9px;
+}
+
+#cloudDetail.cur i {
+    background: url(../images/backstage/cloud_detail_cur.png) no-repeat;
+}
+
+#back i {
+    display: block;
+    width: 41px;
+    height: 35px;
+    margin: 0 auto;
+    background: url(../images/backstage/back.png) no-repeat;
+    margin-bottom: 9px;
+}
+
+.layui-layer-title {
+    background-color: #3a414e!important;
+    color: #fff!important;
+    border-radius: 0!important;
+}
+
+.right {
+    position: absolute;
+    top: 108px;
+    left: 161px;
+    right: 0;
+    bottom: 0;
+    min-height: 100px;
+    background-color: #f5f5f5;
+    overflow-y: auto;
+}
+
+.r-frame {
+    width: 100%;
+    height: 100%;
+    border: none;
+}

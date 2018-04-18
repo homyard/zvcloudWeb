@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="renderer" content="webkit">
+    <!-- 用于响应式网站 -->
+    <!-- <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" /> -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <script src="js/cssboot.js"></script>
+    <script>
+    SrcBoot.output([
+        'css/common.css',
+        'css/SDK.css'
+    ]);
+    </script>
+    <meta name="description" content="下载众云视频通用SDK、众云监控、众云门铃观看端和采集端，快速搭建视频连接平台，简单实现视频监控，安防监控，远程视频连接">
+    <meta name="keywords" content="视频监控，智能分析，众云门铃，众云监控">
+    <meta property="og:title" content="视频监控_众云门铃_众云视频SDK下载">
+    <script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan id='cnzz_stat_icon_1260090164' class='hidden' %3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1260090164' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <title>视频监控_众云门铃_众云视频SDK下载</title>
+</head>
+
+<body>
+    <div class="qq" id="qq"></div>
+    <!-- header -->
+    <div class="header">
+        <div class="glass"></div>
+        <div class="container head-main clearfix">
+            <!-- logo -->
+            <img src="images/frontstage/some/logo-index1.png" class="logo l" />
+            <!-- nav -->
+            <ul class="nav l clearfix">
+                <li class="nav-item">
+                    <a href="index.html">首页</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="solution">解决方案</a>
+                </li>
+                <li class="nav-item">
+                    <a href="cooperation.html">合作案例</a>
+                </li>
+                <li class="nav-item">
+                    <a href="price.html">价格</a>
+                </li>
+                <li class="nav-item cur">
+                    <a href="SDK.html">SDK开发</a>
+                </li>
+                <li class="nav-item">
+                    <a href="documents.html">文档</a>
+                </li>
+                <li class="nav-item">
+                    <a href="news-list.html">新闻动态</a>
+                </li>
+                <li class="nav-item">
+                    <a href="aboutus.html">关于我们</a>
+                </li>
+            </ul>
+            <!-- head button -->
+            <div class="h-btn-box l clearfix" id="user-con">
+                <a href="javascript:;" class="h-btn lo-btn" id="lo-btn">登录</a>
+                <a href="register.html" class="h-btn">注册</a>
+            </div>
+        </div>
+    </div>
+    <div class="img-div">
+        <div class="im container">
+            <h4>掌上看家代码开源</h4>
+            <div class="git-box clearfix">
+                <img src="images/frontstage/some/github.png" class="l">
+                <div class="p-box l">
+                    <p>观看端：<a href="https://github.com/OpenIchano/Viewer" target="_blank">https://github.com/OpenIchano/Viewer</a></p>
+                    <p>采集端：<a href="https://github.com/OpenIchano/AVS" target="_blank">https://github.com/OpenIchano/AVS</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main-c">
+        <div class="container clearfix tabview mh">
+            <ul class="left-menu" data-role="head">
+                <li class="left-title">
+                    SDK开发
+                </li>
+                <li class="left-item cur" data-role="tab" data-target="tab-a">
+                    标准SDK
+                </li>
+                <li class="left-item cur" data-role="tab" data-target="tab-b" id="app">
+                    中性APP展示
+                </li>
+                <!-- <li class="left-item" data-role="tab" data-target="tab-b">
+                    开源项目
+                </li>
+                <li class="left-item" data-role="tab" data-target="tab-c">
+                    SDK更新日志
+                </li> -->
+            </ul>
+            <div class="right-con" data-role="body">
+                <div class="right-item" data-role="tab-content" data-id="tab-a">
+                    <p class="sdk_title">标准SDK</p>
+                    <p class="sdk_word">支持所有平台,集成快速简易</p>
+                    <div class="sdk-tabview tabview">
+                        <div class="sdk-head clearfix" data-role="head">
+                            <div class="sdk-tab cur" data-role="tab" data-target="android">
+                                <img src="images/frontstage/sdk/icon_android.png">
+                            </div>
+                            <div class="sdk-tab" data-role="tab" data-target="ios">
+                                <img src="images/frontstage/sdk/icon_ios.png">
+                            </div>
+                            <div class="sdk-tab" data-role="tab" data-target="linux">
+                                <img src="images/frontstage/sdk/icon_linux.png">
+                            </div>
+                            <div class="sdk-tab last-tab " data-role="tab" data-target="win">
+                                <img src="images/frontstage/sdk/icon_win.png">
+                            </div>
+                        </div>
+                        <div class="sdk-bd" data-role="body">
+                            <div class="sdk-content" data-role="tab-content" data-id="android">
+                                <div class="sdk-con-top">
+                                    <h5>Android 客户端版本更新日志</h5>
+                                    <span class="version"> V 4.3.1 </span>
+                                    <p class="log-info">1.更换sdk登陆状态的回调函数</p>
+                                    <p class="log-info">2.更换采集端连接状态的回调函数
+                                    </p>
+                                    <p class="log-info">3.增加部分高级接口类</p>
+                                    <p class="log-info">4.优化性能,修复其他Bug</p>
+                                </div>
+                                <div class="sdk-con-btm clearfix">
+                                    <div class="sdk-con-item l">
+                                        <div class="sdk-package clearfix">
+                                            <img src="images/frontstage/sdk/sdk_android.png">
+                                            <div class="sdk-info">
+                                                <p>通用SDK观看端</p>
+                                                <span>版本号 v4.3.1</span>
+                                            </div>
+                                        </div>
+                                        <!-- <a href="http://www.zvcloud.com/file/SDK/Viewer4.3.1_Android.zip" class="dl-btn">立即下载</a> -->
+                                    </div>
+                                    <div class="sdk-con-item rc l">
+                                        <div class="sdk-package clearfix">
+                                            <img src="images/frontstage/sdk/sdk_android.png">
+                                            <div class="sdk-info">
+                                                <p>通用SDK采集端</p>
+                                                <span>版本号 v4.3.1</span>
+                                            </div>
+                                        </div>
+                                        <!-- <a href="http://www.zvcloud.com/file/SDK/Streamer4.3.1_Android.zip" class="dl-btn">立即下载</a> -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="sdk-content hidden" data-role="tab-content" data-id="ios">
+                                <div class="sdk-con-top">
+                                    <h5>iOS 客户端版本更新日志</h5>
+                                    <span class="version"> V 4.3.1 </span>
+                                    <p class="log-info">1.更换sdk登陆状态的回调函数</p>
+                                    <p class="log-info">2.更换采集端连接状态的回调函数
+                                    </p>
+                                    <p class="log-info">3.增加部分高级接口类</p>
+                                    <p class="log-info">4.优化性能,修复其他Bug</p>
+                                </div>
+                                <div class="sdk-con-btm clearfix">
+                                    <div class="sdk-con-item l">
+                                        <div class="sdk-package clearfix">
+                                            <img src="images/frontstage/sdk/sdk_ios.png">
+                                            <div class="sdk-info">
+                                                <p>通用SDK观看端</p>
+                                                <span>版本号 v4.3.1</span>
+                                            </div>
+                                        </div>
+                                        <!-- <a href="http://www.zvcloud.com/file/SDK/Viewer4.3.1_iOS.zip" class="dl-btn">立即下载</a> -->
+                                    </div>
+                                    <div class="sdk-con-item rc l">
+                                        <div class="sdk-package clearfix">
+                                            <img src="images/frontstage/sdk/sdk_ios.png">
+                                            <div class="sdk-info">
+                                                <p>通用SDK采集端</p>
+                                                <span>版本号 v4.3.1</span>
+                                            </div>
+                                        </div>
+                                        <!-- <a href="http://www.zvcloud.com/file/SDK/Streamer4.3.1_iOS.zip" class="dl-btn">立即下载</a> -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="sdk-content hidden" data-role="tab-content" data-id="linux">
+                                <div class="sdk-con-top">
+                                    <h5>Linux 客户端版本更新日志</h5>
+                                    <span class="version"> V 4.3.1 </span>
+                                    <p class="log-info">1.更换sdk登陆状态的回调函数</p>
+                                    <p class="log-info">2.更换采集端连接状态的回调函数
+                                    </p>
+                                    <p class="log-info">3.增加部分高级接口类</p>
+                                    <p class="log-info">4.优化性能,修复其他Bug</p>
+                                </div>
+                                <div class="sdk-con-btm clearfix">
+                                    <div class="sdk-con-box">
+                                        <div class="sdk-con-item l">
+                                            <div class="sdk-package clearfix">
+                                                <img src="images/frontstage/sdk/sdk_linux.png">
+                                                <div class="sdk-info">
+                                                    <p>通用SDK MIPS平台采集端</p>
+                                                    <span>版本号 v4.3.1</span>
+                                                </div>
+                                            </div>
+                                            <!-- <a href="http://www.zvcloud.com/file/SDK/mips_Streamer_v4.3.1.zip" class="dl-btn">立即下载</a> -->
+                                        </div>
+                                        <div class="sdk-con-item rc l">
+                                            <div class="sdk-package clearfix">
+                                                <img src="images/frontstage/sdk/sdk_linux.png">
+                                                <div class="sdk-info">
+                                                    <p>通用SDK ARM富翰平台采集端</p>
+                                                    <span>版本号 v4.3.1</span>
+                                                </div>
+                                            </div>
+                                            <!-- <a href="http://www.zvcloud.com/file/SDK/Fullhan_Streamer_v4.3.1.zip" class="dl-btn">立即下载</a> -->
+                                        </div>
+                                    </div>
+                                    <div class="sdk-con-box2">
+                                        <div class="sdk-con-item l">
+                                            <div class="sdk-package clearfix">
+                                                <img src="images/frontstage/sdk/sdk_linux.png">
+                                                <div class="sdk-info">
+                                                    <p>通用SDK ARM海思3518平台采集端</p>
+                                                    <span>版本号 v4.3.1</span>
+                                                </div>
+                                            </div>
+                                            <!-- <a href="http://www.zvcloud.com/file/SDK/Hisilicon_Streamer_v4.3.1.zip" class="dl-btn">立即下载</a> -->
+                                        </div>
+                                        <div class="sdk-con-item rc l">
+                                            <div class="sdk-package clearfix">
+                                                <img src="images/frontstage/sdk/sdk_linux.png">
+                                                <div class="sdk-info">
+                                                    <p>通用SDK ARM台湾松瀚平台采集端</p>
+                                                    <span>版本号 v4.3.1</span>
+                                                </div>
+                                            </div>
+                                            <!--  <a href="http://www.zvcloud.com/file/SDK/Sonix_Streamer_v4.3.1.zip" class="dl-btn">立即下载</a> -->
+                                        </div>
+                                    </div>
+                                    <div class="sdk-con-item l">
+                                        <div class="sdk-package clearfix">
+                                            <img src="images/frontstage/sdk/sdk_linux.png">
+                                            <div class="sdk-info">
+                                                <p>通用SDK ARM树莓派内核采集端</p>
+                                                <span>版本号 v4.3.1</span>
+                                            </div>
+                                        </div>
+                                        <!-- <a href="http://www.zvcloud.com/file/SDK/BCM2708_Streamer_v4.3.1.zip" class="dl-btn">立即下载</a> -->
+                                    </div>
+                                    <div class="sdk-con-item rc ">
+                                        <div class="sdk-package clearfix">
+                                            <!-- <img src="images/frontstage/sdk/sdk_linux.png">
+                                            <div class="sdk-info">
+                                                <p>通用SDK ARM富翰平台采集端</p>
+                                                <span>版本号 v4.1</span>
+                                            </div> -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="sdk-content hidden" data-role="tab-content" data-id="win">
+                                <div class="sdk-con-top">
+                                    <h5>Windows 客户端版本更新日志</h5>
+                                    <span class="version"> V 4.3.1 </span>
+                                    <p class="log-info">1.更换sdk登陆状态的回调函数</p>
+                                    <p class="log-info">2.更换采集端连接状态的回调函数
+                                    </p>
+                                    <p class="log-info">3.增加部分高级接口类</p>
+                                    <p class="log-info">4.优化性能,修复其他Bug</p>
+                                </div>
+                                <div class="sdk-con-btm clearfix">
+                                    <div class="sdk-con-box">
+                                        <div class="sdk-con-item l">
+                                            <div class="sdk-package clearfix">
+                                                <img src="images/frontstage/sdk/sdk_windows.png">
+                                                <div class="sdk-info">
+                                                    <p>通用SDK观看端</p>
+                                                    <span>版本号 v4.3.1</span>
+                                                </div>
+                                            </div>
+                                            <!-- <a href="http://www.zvcloud.com/file/SDK/Viewer4.3.1_Windows.zip" class="dl-btn">立即下载</a> -->
+                                        </div>
+                                        <div class="sdk-con-item rc l">
+                                            <div class="sdk-package clearfix">
+                                                <img src="images/frontstage/sdk/sdk_windows.png">
+                                                <div class="sdk-info">
+                                                    <p>通用SDK采集端</p>
+                                                    <span>版本号 v4.3.1</span>
+                                                </div>
+                                            </div>
+                                            <!-- <a href="http://www.zvcloud.com/file/SDK/Streamer4.3.1_Windows.zip" class="dl-btn">立即下载</a> -->
+                                        </div>
+                                    </div>
+                                    <div class="sdk-con-item l" style="margin-top:30px;">
+                                        <div class="sdk-package clearfix">
+                                            <img src="images/frontstage/sdk/sdk_windows.png">
+                                            <div class="sdk-info">
+                                                <p style="width:150px; font-size: 17px;">Windows Web 观看端 SDK(ocx控件)</p>
+                                                <span>版本号 v4.3.1</span>
+                                            </div>
+                                        </div>
+                                        <!-- <a href="http://www.zvcloud.com/file/SDK/Windows_ocx_v4.3.1.zip" class="dl-btn">立即下载</a> -->
+                                    </div>
+                                    <div class="sdk-con-item rc l" style="margin-top:30px;">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bx">
+                        <a href="aboutus.html?m=co" class="con-us">联系我们</a>
+                    </div>
+                    <div class="line"></div>
+                </div>
+                <div class="right-item hidden" data-role="tab-content" data-id="tab-b">
+                    <p class="show-title">众云监控Android版本：</p>
+                    <div class="show-box">
+                        <div class="show-img">
+                            <img src="images/frontstage/sdk/zyjk.jpg" alt="">
+                        </div>
+                        <div class="show-content">
+                            <div class="show-avs">
+                                <div class="inner1"><img src="images/frontstage/sdk/zyjk-view.png" alt=""></div>
+                                <div class="inner2">
+                                    <p>众云监控</p>
+                                    <p>软件大小：8.56 MB</p>
+                                    <p>操作体统：Android2.3或以上</p>
+                                    <p>软件版本：V2.2.1</p>
+                                </div>
+                                <!--<div class="inner3">
+                                   <p>语言：英语，中文<br>
+                                       更新日期：5/30/2016</p>
+                               </div>-->
+                                <div class="inner4">
+                                    <a href="http://www.zvcloud.com/file/SDK/ZX/zhongyun_client_2.20.001.apk" class="show-download">立即下载</a>
+                                    <br>
+                                    <!--<a href="#">扫描二维码</a>-->
+                                </div>
+                            </div>
+                            <div class="show-views">
+                                <div class="inner1"><img src="images/frontstage/sdk/zyjk-avs.png" alt=""></div>
+                                <div class="inner2">
+                                    <p style="margin-top:20px;">众云监控采集端</p>
+                                    <p>软件大小：5.43 MB</p>
+                                    <p>操作体统：Android2.3或以上</p>
+                                    <p>软件版本：V2.2.1</p>
+                                </div>
+                                <!-- <div class="inner3">
+                                   <p>语言：英语，中文
+                                       <br>更新日期：5/30/2016</p>
+                               </div>-->
+                                <div class="inner4">
+                                    <a href="http://www.zvcloud.com/file/SDK/ZX/zhongyun_avs_2.20.001.apk" class="show-download">立即下载</a>
+                                    <br>
+                                    <!-- <a>扫描二维码</a>-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="show-title">众云门铃Android版本：</p>
+                    <div class="show-box">
+                        <div class="show-img">
+                            <img src="images/frontstage/sdk/zyml.jpg" alt="">
+                        </div>
+                        <div class="show-content">
+                            <div class="show-avs">
+                                <div class="inner1"><img src="images/frontstage/sdk/zyml-avs.png" alt=""></div>
+                                <div class="inner2">
+                                    <p>众云门铃</p>
+                                    <p>软件大小：7.38 MB</p>
+                                    <p>操作体统：Android2.3或以上</p>
+                                    <p>软件版本：V1.1.1</p>
+                                </div>
+                                <!-- <div class="inner3">
+                                   <p>语言：英语，中文<br> 更新日期：5/30/2016</p>
+                               </div>-->
+                                <div class="inner4">
+                                    <a href="http://www.zvcloud.com/file/SDK/ZX/ichano_viewer_360_Aligned.apk" class="show-download">立即下载</a>
+                                    <br>
+                                    <!-- <a href="#">扫描二维码</a>-->
+                                </div>
+                            </div>
+                            <div class="show-views">
+                                <div class="inner1"><img src="images/frontstage/sdk/zyml-view.png" alt=""></div>
+                                <div class="inner2">
+                                    <p>众云门铃采集端</p>
+                                    <p>软件大小：4.53 MB</p>
+                                    <p>操作体统：Android2.3或以上</p>
+                                    <p>软件版本：V1.1.1</p>
+                                </div>
+                                <!--<div class="inner3">
+                                   <p>语言：英语，中文
+                                       <br>更新日期：5/30/2016</p>
+                               </div>-->
+                                <div class="inner4">
+                                    <a href="http://www.zvcloud.com/file/SDK/ZX/ichano_avs_360_Aligned.apk" class="show-download">立即下载</a>
+                                    <br>
+                                    <!--<a>扫描二维码</a>-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="show-word">
+                        <p class="show-word-bold"><span class="color-b">*</span> 以上应用均支持Android、iOS、Windows系统的换肤和定制。</p>
+                        <p class="show-word-nor">如有需求请联系我们：</p>
+                        <p class="show-tips">QQ：2557132353</p>
+                        <p class="show-tips">邮箱：business@ichano.com</p>
+                        <p class="show-tips">电话：025-84986658</p>
+                    </div>
+                </div>
+                <!-- <div class="right-item hidden" data-role="tab-content" data-id="tab-c">
+               </div> -->
+            </div>
+        </div>
+    </div>
+    <!-- footer -->
+    <div id="footer">
+        <script type="text/javascript">
+        $("#footer").load("footer.html");
+        </script>
+    </div>
+    <script type="x-tmpl-mustache" id="user-templ">
+        <a href='zvcloudManage.html' class='h-btn lo-btn'>{{mobile_phone}}</a>
+        <a href='#' class='h-btn' id='login-out'>注销</a>
+    </script>
+    <!-- 页面脚本 -->
+    <script src="js/jsboot.js"></script>
+    <script>
+    SrcBoot.output([
+        'plugins/tabview.js',
+        'js/func.js',
+        'js/common.js',
+        'js/sdk.js'
+    ]);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,146 @@
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="renderer" content="webkit">
+    <!-- 用于响应式网站 -->
+    <!-- <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" /> -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <script src="js/cssboot.js"></script>
+    <script>
+    SrcBoot.output([
+        'http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.min.css',
+        'css/bcommon.css',
+        'css/table.css',
+        'plugins/bs_pagination/jquery.bs_pagination.min.css',
+        'js/fpick/flatpickr.min.css',
+        'css/cloud.css',
+        'css/manage.css',
+        'css/yuemian.css',
+        // 'plugins/pager/pager.css'
+    ]);
+    </script>
+    <style type="text/css">
+        #rows_info_domestic-pager {
+            font-size: 16px;
+            line-height: 31px;
+        }
+    </style>
+    <title>众云视频后台管理系统</title>
+</head>
+
+<body>
+    <div class="head clearfix">
+        <img src="images/backstage/logo.png" alt="">
+    </div>
+    <div class="main">
+        <div class="btn-bar clearfix">
+            <span class="search-btn btn-green" id="detail_search">查询</span>
+            <div class="date-item clearfix">
+                <label>结束时间</label>
+                <input type="text" class="date" id="endTime" readonly="readonly">
+            </div>
+            <div class="date-item clearfix">
+                <label>开始时间</label>
+                <input type="text" class="date" id="startTime" readonly="readonly">
+            </div>
+        </div>
+        <div class="tabview">
+            <div class="country-sub" data-role="head">
+                <div class="country-sub-item country-last-item" data-role="tab" data-target="con1">国内</div>
+                <div class="country-sub-item" data-role="tab" data-target="con2">国外</div>
+            </div>
+            <div class="country-con" data-role="body">
+                <div class="list-con" data-role="tab-content" data-id="con1">
+                    <table class="list-table" id="domestic-statistic">
+                    </table>
+                    <table class="list-table">
+                        <thead>
+                            <tr class="t-head">
+                                <th class="td25">订单号</th>
+                                <th class="td25">CID</th>
+                                <th class="td25">月数</th>
+                                <th class="td25">订单时间</th>
+                            </tr>
+                        </thead>
+                        <tbody id="domestic-con">
+                        </tbody>
+                    </table>
+                    <div id="domestic-pager"></div>
+                </div>
+                <div class="list-con" data-role="tab-content" data-id="con2">
+                    <table class="list-table" id="abroad-statistic">
+                    </table>
+                    <table class="list-table">
+                        <thead>
+                            <tr class="t-head">
+                                <th class="td25">订单号</th>
+                                <th class="td25">CID</th>
+                                <th class="td25">月数</th>
+                                <th class="td25">订单时间</th>
+                            </tr>
+                        </thead>
+                        <tbody id="abroad-con">
+                        </tbody>
+                    </table>
+                    <div id="abroad-pager"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="x-tmpl-mustache" id="statistic-templ">
+        <tr class="tr2 bggray">
+            <th class="td20 bggray"></th>
+            <th class="td16">月付</th>
+            <th class="td16">季付</th>
+            <th class="td16">半年付</th>
+            <th class="td16">年付</th>
+            <th class="td16">总计</th>
+        </tr>
+        <tr class="tr2">
+            <td class="td20 bggray">订单笔数</td>
+            <td class="td16">{{month_statistic.order_count}}</td>
+            <td class="td16">{{quarter_statistic.order_count}}</td>
+            <td class="td16">{{half_statistic.order_count}}</td>
+            <td class="td16">{{year_statistic.order_count}}</td>
+            <td class="td16">{{totol_statistic.order_count}}</td>
+        </tr>
+        <tr class="tr2">
+            <td class="td20 bggray">总计月数</td>
+            <td class="td16">{{month_statistic.month_count}}</td>
+            <td class="td16">{{quarter_statistic.month_count}}</td>
+            <td class="td16">{{half_statistic.month_count}}</td>
+            <td class="td16">{{year_statistic.month_count}}</td>
+            <td class="td16">{{totol_statistic.month_count}}</td>
+        </tr>
+    </script>
+    <script type="x-tmpl-mustache" id="list-templ">
+        {{#items}}
+        <tr class="tr h59">
+            <td class="td20">{{order_no}}</td>
+            <td class="td10">{{cid}}</td>
+            <td class="td10">{{month_count}}</td>
+            <td class="td20">{{order_time}}</td>
+        </tr>
+        {{/items}}
+    </script>
+
+    <!-- 页面脚本 -->
+    <script src="js/jsboot.js"></script>
+    <script>
+    SrcBoot.output([
+        // 'plugins/pager/jquery.pager.js',
+        'http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js',
+        'plugins/bs_pagination/jquery.bs_pagination.min.js',
+        'plugins/bs_pagination/localization/en.min.js',
+        'plugins/tabview.js',
+        'js/fpick/flatpickr.min.js',
+        'js/fpick/flatpickr.l10n.zh.js',
+        'js/func.js',
+        'js/yuemian.js'
+    ]);
+    </script>
+</body>
+
+</html>
